@@ -1,0 +1,32 @@
+@use "sass:math";
+// ==============================
+@import "./null";
+@import "./mixins";
+@import "./colors";
+@import "./fonts";
+//=======================
+body {
+  max-width: toRem(1320); /* 1320/16 */
+  background-color: $lightColor;
+  color: $mainColor;
+  margin: 0 auto;
+  padding-left: toRem(15);
+  padding-right: toRem(15);
+  font-family: "ProximaNova", sans-serif;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+  transition: all 0.3s;
+  .cart-open &,
+  .catalog-open & {
+    filter: blur(toRem(2));
+  }
+}
+//============================
