@@ -4,14 +4,12 @@
 @import "./mixins";
 @import "./colors";
 @import "./fonts";
+@import "./header";
 //=======================
 body {
-  max-width: toRem(1320); /* 1320/16 */
   background-color: $lightColor;
   color: $mainColor;
   margin: 0 auto;
-  padding-left: toRem(15);
-  padding-right: toRem(15);
   font-family: "ProximaNova", sans-serif;
 }
 .wrapper {
@@ -28,5 +26,11 @@ body {
   .catalog-open & {
     filter: blur(toRem(2));
   }
+}
+//===================
+[class*="__container"] {
+  max-width: toRem(1320); /* 1320/16 */
+  padding-left: toRem(15);
+  padding-right: toRem(15);
 }
 //============================

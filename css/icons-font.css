@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "icons";
+  src: url("../fonts-icon/icons.eot?2w5a7l");
+  src: url("../fonts-icon/icons.eot?2w5a7l#iefix") format("embedded-opentype"),
+    url("../fonts-icon/icons.ttf?2w5a7l") format("truetype"),
+    url("../fonts-icon/icons.woff?2w5a7l") format("woff"),
+    url("../fonts-icon/icons.svg?2w5a7l#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-viber:before {
+  content: "\e900";
+}
+._icon-twitter:before {
+  content: "\e901";
+}
+._icon-mastercard:before {
+  content: "\e902";
+}
+._icon-menu-catalog:before {
+  content: "\e903";
+}
+._icon-title:before {
+  content: "\e904";
+}
+._icon-call:before {
+  content: "\e905";
+}
+._icon-arrow-down:before {
+  content: "\e906";
+}
+._icon-likes:before {
+  content: "\e907";
+}
+._icon-basket:before {
+  content: "\e908";
+}
+._icon-star:before {
+  content: "\e909";
+}
+._icon-percent:before {
+  content: "\e90a";
+}
+._icon-credit:before {
+  content: "\e90b";
+}
+._icon-positon:before {
+  content: "\e90c";
+}
+._icon-calendar:before {
+  content: "\e90d";
+}
+._icon-search:before {
+  content: "\e90e";
+}
+._icon-visa:before {
+  content: "\e90f";
+}
