@@ -5,11 +5,11 @@
 @import "./colors";
 @import "./fonts";
 @import "./header";
+
 //=======================
 body {
   background-color: $lightColor;
   color: $mainColor;
-  margin: 0 auto;
   font-family: "ProximaNova", sans-serif;
 }
 .wrapper {
@@ -32,5 +32,6 @@ body {
   max-width: toRem(1320); /* 1320/16 */
   padding-left: toRem(15);
   padding-right: toRem(15);
+  margin: 0 auto;
 }
 //============================
