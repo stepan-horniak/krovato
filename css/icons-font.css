@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icons";
-  src: url("../fonts-icon/icons.eot?2w5a7l");
-  src: url("../fonts-icon/icons.eot?2w5a7l#iefix") format("embedded-opentype"),
-    url("../fonts-icon/icons.ttf?2w5a7l") format("truetype"),
-    url("../fonts-icon/icons.woff?2w5a7l") format("woff"),
-    url("../fonts-icon/icons.svg?2w5a7l#icons") format("svg");
+  src: url("../fonts-icon/icons.eot?mkldqm");
+  src: url("../fonts-icon/icons.eot?mkldqm#iefix") format("embedded-opentype"),
+    url("../fonts-icon/icons.ttf?mkldqm") format("truetype"),
+    url("../fonts-icon/icons.woff?mkldqm") format("woff"),
+    url("../fonts-icon/icons.svg?mkldqm#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,51 +26,81 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-._icon-viber:before {
+._icon-beds:before {
   content: "\e900";
 }
-._icon-twitter:before {
+._icon-komod:before {
   content: "\e901";
 }
-._icon-mastercard:before {
+._icon-kuhni:before {
   content: "\e902";
 }
-._icon-menu-catalog:before {
+._icon-lizhka:before {
   content: "\e903";
 }
-._icon-title:before {
+._icon-mm:before {
   content: "\e904";
 }
-._icon-call:before {
+._icon-mstiny:before {
   content: "\e905";
 }
-._icon-arrow-down:before {
+._icon-shafa:before {
   content: "\e906";
 }
-._icon-likes:before {
+._icon-stilci:before {
   content: "\e907";
 }
-._icon-basket:before {
+._icon-stol:before {
   content: "\e908";
 }
-._icon-star:before {
+._icon-tumba:before {
   content: "\e909";
 }
-._icon-percent:before {
+._icon-viber:before {
   content: "\e90a";
 }
-._icon-credit:before {
+._icon-twitter:before {
   content: "\e90b";
 }
-._icon-positon:before {
+._icon-mastercard:before {
   content: "\e90c";
 }
-._icon-calendar:before {
+._icon-menu-catalog:before {
   content: "\e90d";
 }
-._icon-search:before {
+._icon-title:before {
   content: "\e90e";
 }
-._icon-visa:before {
+._icon-call:before {
   content: "\e90f";
+}
+._icon-arrow-down:before {
+  content: "\e910";
+}
+._icon-likes:before {
+  content: "\e911";
+}
+._icon-basket:before {
+  content: "\e912";
+}
+._icon-star:before {
+  content: "\e913";
+}
+._icon-percent:before {
+  content: "\e914";
+}
+._icon-credit:before {
+  content: "\e915";
+}
+._icon-positon:before {
+  content: "\e916";
+}
+._icon-calendar:before {
+  content: "\e917";
+}
+._icon-search:before {
+  content: "\e918";
+}
+._icon-visa:before {
+  content: "\e919";
 }

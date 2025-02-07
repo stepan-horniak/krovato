@@ -1,0 +1,372 @@
+.footer {
+  // .footer__wrapper
+
+  &__wrapper {
+    background-color: $mainColor;
+    color: $white;
+  }
+
+  // .footer__container
+
+  &__container {
+    padding: toRem(40) 0;
+  }
+
+  // .footer__row
+
+  &__row {
+    display: flex;
+    gap: toRem(83);
+    @media (max-width: toEm(1280)) {
+      gap: toRem(20);
+    }
+  }
+
+  // .footer__socials
+
+  &__socials {
+  }
+
+  // .footer__info
+
+  &__info {
+    flex: 1 0 auto;
+  }
+
+  // .footer__adress
+
+  &__adress {
+  }
+
+  // .footer__notice
+
+  &__notice {
+  }
+}
+.footer-socials {
+  // .footer-socials__row
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(40);
+  }
+
+  // .footer-socials__logo
+
+  &__logo {
+    max-width: toRem(250);
+    & > img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .footer-socials__socials
+
+  &__socials {
+    margin-bottom: toRem(-10);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+  }
+
+  // .footer-socials__chatbot
+
+  &__chatbot {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+  }
+
+  // .footer-socials__cart
+
+  &__cart {
+    display: flex;
+    gap: toRem(20);
+  }
+}
+.footer-socials-socials {
+  // .footer-socials-socials__text
+
+  &__text {
+    font-size: toRem(17);
+    line-height: 1.5; /* 24/16 */
+  }
+
+  // .footer-socials-socials__socials
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: toRem(15);
+  }
+
+  // .footer-socials-socials__facebook
+
+  &__facebook {
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    border-radius: 50%;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .footer-socials-socials__instagram
+
+  &__instagram {
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    border-radius: 50%;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.footer-socials-chatbot {
+  // .footer-socials-chatbot__text
+
+  &__text {
+    font-size: toRem(17);
+    line-height: 1.5; /* 24/16 */
+  }
+
+  // .footer-socials-chatbot__socials
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: toRem(15);
+  }
+
+  // .footer-socials-chatbot__twit
+
+  &__twit {
+    width: 40px;
+    height: 40px;
+    background-color: #75b73b;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: toRem(23);
+    }
+  }
+
+  // .footer-socials-chatbot__telegram
+
+  &__telegram {
+    width: 40px;
+    height: 40px;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .footer-socials-chatbot__viber
+
+  &__viber {
+    width: 40px;
+    height: 40px;
+    background-color: #75b73b;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: toRem(23);
+    }
+  }
+}
+
+.footer-socials-cart {
+  // .footer-socials-cart__visa
+
+  &__visa {
+    font-size: toRem(30);
+  }
+
+  // .footer-socials-cart__mastercard
+
+  &__mastercard {
+    font-size: toRem(30);
+  }
+}
+//////////////////////////////////////
+/// \
+///
+
+.footer-info {
+  // .footer-info__wrapper
+
+  &__wrapper {
+  }
+}
+
+.wrapper-info-footer {
+  // .wrapper-info-footer__row
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(15);
+  }
+
+  // .wrapper-info-footer__block
+
+  &__block {
+  }
+
+  // .wrapper-info-footer__title
+
+  &__title {
+    font-weight: 600;
+    font-size: toRem(20);
+    line-height: 1.75; /* 28/16 */
+  }
+
+  // .wrapper-info-footer__list
+
+  &__list {
+  }
+
+  // .wrapper-info-footer__item
+
+  &__item {
+  }
+
+  // .wrapper-info-footer__link
+
+  &__link {
+    font-size: toRem(17);
+    line-height: 1.5; /* 24/16 */
+  }
+}
+.footer-adress {
+  max-width: toRem(250);
+  display: flex;
+  flex-direction: column;
+  gap: toRem(30);
+
+  // .footer-adress__number
+
+  &__number {
+    padding-left: toRem(65);
+  }
+
+  // .footer-adress__adress
+
+  &__adress {
+  }
+
+  // .footer-adress__working
+
+  &__working {
+  }
+}
+.footer-adress-number {
+  position: relative;
+
+  // .footer-adress-number__numbers
+
+  &__numbers {
+    font-size: toRem(20);
+    font-weight: 600;
+    line-height: 1.75; /* 28/16 */
+    &::before {
+      position: absolute;
+      left: toRem(0);
+      top: 0;
+      font-size: toRem(20);
+      color: $lightGreyColor;
+      border: toRem(1) solid $greyColor;
+      border-radius: 50%;
+      padding: toRem(15);
+    }
+  }
+
+  // .footer-adress-number__number
+
+  &__number {
+  }
+
+  // .footer-adress-number__text
+
+  &__text {
+    color: $yellowColor;
+  }
+}
+.footer-adress-adress {
+  // .footer-adress-adress__text
+
+  &__text {
+    position: relative;
+    font-size: toRem(20);
+    font-weight: 600;
+    line-height: 1.75; /* 28/16 */
+    padding-left: toRem(65);
+    &::before {
+      position: absolute;
+      left: toRem(0);
+      top: 0;
+      font-size: toRem(20);
+      color: $lightGreyColor;
+      border: toRem(1) solid $greyColor;
+      border-radius: 50%;
+      padding: toRem(15);
+    }
+  }
+}
+.footer-adress-working {
+  // .footer-adress-working__text
+
+  &__text {
+    position: relative;
+    font-size: toRem(20);
+    line-height: 1.75; /* 28/16 */
+    padding-left: toRem(65);
+
+    &::before {
+      position: absolute;
+      left: toRem(0);
+      top: 0;
+      font-size: toRem(20);
+      color: $lightGreyColor;
+      border: toRem(1) solid $greyColor;
+      border-radius: 50%;
+      padding: toRem(15);
+    }
+  }
+}
+.footer-notice {
+  // .footer-notice__border
+
+  &__border {
+    width: 100%;
+    height: toRem(1);
+    background-color: $greyColor;
+  }
+
+  // .footer-notice__info-text
+
+  &__info-text {
+    text-align: center;
+    color: $lightGreyColor;
+    font-weight: 300;
+    padding: toRem(20) 0;
+  }
+}
