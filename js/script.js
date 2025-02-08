@@ -117,9 +117,9 @@ function windowLoaded() {
   document.addEventListener("click", (e) => documentActions(e))
 
   //========================
-  const mediaQuery991 = window.matchMedia("(max-width: 991.98px)")
-
   function handleScreenChange(e) {
+    const screenWidth = window.innerWidth
+
     const topContainer = document.querySelector(".header-top__container")
     const parrentTopContainer = document.querySelector(".header-top")
 
@@ -128,22 +128,14 @@ function windowLoaded() {
 
     const burgerMenu = document.querySelector(".header-main__menu-burger")
 
-    if (e.matches) {
+    if (screenWidth <= 991.98) {
       burgerMenu.append(bottomContainer)
       burgerMenu.append(topContainer)
     } else {
       parrentTopContainer.append(topContainer)
       parrentBottomContainer.append(bottomContainer)
     }
-  }
-  handleScreenChange(mediaQuery991)
 
-  mediaQuery991.addEventListener("change", handleScreenChange)
-
-  //========================
-  const mediaQuery767 = window.matchMedia("(max-width: 767.98px)")
-
-  function handleScreenChange767(e) {
     //===============header-dinamic-change-el============
     const mainContainer = document.querySelector(".header-main__container")
     const parrentEl = document.querySelector(".header-bottom")
@@ -154,7 +146,7 @@ function windowLoaded() {
     const headerElFavorite = document.querySelector(".header-main__favorite")
     const headerElTel = document.querySelector(".header-main__tell")
 
-    if (e.matches) {
+    if (screenWidth <= 767.98) {
       parrentEl.append(headerElButton)
       parrentEl.append(headerElSearch)
       parrentEl.append(headerElFavorite)
@@ -166,12 +158,23 @@ function windowLoaded() {
     }
 
     //===============header-close-search-header===============
-    if (!e.matches) {
+    if (screenWidth > 767.98) {
       const searchEl = document.querySelector(".header-search__container")
       searchEl.classList.remove("active")
     }
-  }
-  handleScreenChange767(mediaQuery767)
+    //===============footer===========================
+    const footerAdressContainer = document.querySelector(".footer__adress")
+    const footerInfoContainer = document.querySelector(".footer-info__wrapper")
+    const footerMainContainer = document.querySelector(".footer__row")
 
-  mediaQuery767.addEventListener("change", handleScreenChange767)
+    if (screenWidth < 1100) {
+      footerInfoContainer.append(footerAdressContainer)
+    } else {
+      footerMainContainer.append(footerAdressContainer)
+    }
+  }
+
+  handleScreenChange()
+
+  window.addEventListener("resize", handleScreenChange)
 }

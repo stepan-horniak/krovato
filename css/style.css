@@ -1487,6 +1487,17 @@ textarea {
           flex-direction: column;
   gap: 1.875rem;
 }
+@media (max-width: 68.75em) {
+  .footer-adress {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 .footer-adress__number {
   padding-left: 4.0625rem;
 }

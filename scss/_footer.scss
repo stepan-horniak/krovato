@@ -261,7 +261,11 @@
   display: flex;
   flex-direction: column;
   gap: toRem(30);
-
+  @media (max-width: toEm(1100)) {
+    flex-direction: row;
+    justify-content: space-between;
+    // max-width: ;//==================================================================================================================
+  }
   // .footer-adress__number
 
   &__number {
