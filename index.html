@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/icons-font.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="./js/script.js"></script>
   <title>Krovato</title>
 </head>
@@ -13,719 +14,823 @@
 <body>
   <div class="wrapper">
     <header>
+      <div class="header__wrapper">
 
-      <div class="header-top">
-        <div class="header-top__container">
-          <div class="header-top__about header-top-about">
-            <ul class="header-top-about__list">
-              <li class="header-top-about__item">
-                <a href="" class="header-top-about__link">Про нас</a>
-              </li>
-              <li class="header-top-about__item">
-                <a href="" class="header-top-about__link">Оплата
-                </a>
-              </li>
-              <li class="header-top-about__item">
-                <a href="" class="header-top-about__link">Доставка та
-                  збірка
-                </a>
-              </li>
-              <li class="header-top-about__item">
-                <a href="" class="header-top-about__link">Відгуки
-                </a>
-              </li>
-              <li class="header-top-about__item">
-                <a href="" class="header-top-about__link">Блог
-                </a>
-              </li>
-              <li class="header-top-about__item">
-                <a href="" class="header-top-about__link">Контакти
-                </a>
-              </li>
+        <div class="header-top">
+          <div class="header-top__container">
+            <div class="header-top__about header-top-about">
+              <ul class="header-top-about__list">
+                <li class="header-top-about__item">
+                  <a href="" class="header-top-about__link">Про нас</a>
+                </li>
+                <li class="header-top-about__item">
+                  <a href="" class="header-top-about__link">Оплата
+                  </a>
+                </li>
+                <li class="header-top-about__item">
+                  <a href="" class="header-top-about__link">Доставка та
+                    збірка
+                  </a>
+                </li>
+                <li class="header-top-about__item">
+                  <a href="" class="header-top-about__link">Відгуки
+                  </a>
+                </li>
+                <li class="header-top-about__item">
+                  <a href="" class="header-top-about__link">Блог
+                  </a>
+                </li>
+                <li class="header-top-about__item">
+                  <a href="" class="header-top-about__link">Контакти
+                  </a>
+                </li>
 
-            </ul>
-          </div>
-          <div class="header-top__consultation header-top-consultation">
-
-            <div class="header-top-consultation__text">Допомога і консультація:
+              </ul>
             </div>
-            <div class="header-top-consultation__icons-help header-top-consultation-icons-help">
-              <div class="header-top-consultation-icons-help__twitter _icon-twitter">
+            <div class="header-top__consultation header-top-consultation">
+
+              <div class="header-top-consultation__text">Допомога і консультація:
               </div>
-              <div class="header-top-consultation-icons-help__telegram"><img src="./images/header/telegram.svg" alt="">
+              <div class="header-top-consultation__icons-help header-top-consultation-icons-help">
+                <div class="header-top-consultation-icons-help__twitter _icon-twitter">
+                </div>
+                <div class="header-top-consultation-icons-help__telegram"><img src="./images/header/telegram.svg"
+                    alt="">
+                </div>
+                <div class="header-top-consultation-icons-help__viber _icon-viber">
+                </div>
               </div>
-              <div class="header-top-consultation-icons-help__viber _icon-viber">
-              </div>
-            </div>
-            <div class="header-top-consultation__language _icon-arrow-down">
-              <a>UA</a>
-              <div class="header-top-consultation__active-language">
-                <a>EN</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-      <div class="header-main">
-        <div class="header-main__container">
-          <div class="header-main__burger header-main-burger">
-            <div class="header-main-burger__border"></div>
-            <div class="header-main-burger__border"></div>
-            <div class="header-main-burger__border"></div>
-          </div>
-          <div class="header-main__menu-burger"></div>
-          <div class="header-main__logo header-main-logo">
-            <img src="./images/header/logo-header.svg" alt="">
-          </div>
-          <div class="header-main__catalog header-main-catalog ">
-            <button class="header-main-catalog__button _icon-menu-catalog">Каталог</button>
-            <div class="header-main-catalog__popap header-button-popap">
-              <div class="header-button-popap__wrapper">
-                <div class="header-button-popap__row">
-                  <ul class="header-button-popap__list">
-                    <li class="header-button-popap__item _icon-lizhka">
-                      <a href="#" class="header-button-popap__link _icon-arrow-down">
-                        Ліжка</a>
-                      <ul class="header-button-popap-insert__list">
-
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Односпальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Двоспальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Bonnel</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Безпружинні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            з
-                            ефектом
-                            Зима-Літо</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Футони</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Дитячі
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            Економ</a>
-                        </li>
-                      </ul>
-
-                    </li>
-                    <li class="header-button-popap__item _icon-beds">
-                      <a class="header-button-popap__link _icon-arrow-down" href="#">
-                        Матраци</a>
-                    </li>
-                    <li class="header-button-popap__item _icon-mm">
-                      <a class="header-button-popap__link _icon-arrow-down" href="#"> М’які
-                        меблі</a>
-                      <ul class="header-button-popap-insert__list">
-
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Односпальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Двоспальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Bonnel</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Безпружинні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            з
-                            ефектом
-                            Зима-Літо</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Футони</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Дитячі
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            Економ</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="header-button-popap__item _icon-shafa">
-                      <a class="header-button-popap__link _icon-arrow-down" href="#">
-                        Шафи</a>
-                      <ul class="header-button-popap-insert__list">
-
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Односпальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Двоспальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Bonnel</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Безпружинні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            з
-                            ефектом
-                            Зима-Літо</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Футони</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Дитячі
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            Економ</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="header-button-popap__item _icon-komod">
-                      <a class="header-button-popap__link _icon-arrow-down" href="#">
-                        Комоди</a>
-                      <ul class="header-button-popap-insert__list">
-
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Односпальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Двоспальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Bonnel</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Безпружинні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            з
-                            ефектом
-                            Зима-Літо</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Футони</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Дитячі
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            Економ</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="header-button-popap__item _icon-tumba">
-                      <a class="header-button-popap__link _icon-arrow-down" href="#">
-                        Тумби</a>
-                      <ul class="header-button-popap-insert__list">
-
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Односпальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Двоспальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Bonnel</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Безпружинні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            з
-                            ефектом
-                            Зима-Літо</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Футони</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Дитячі
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            Економ</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="header-button-popap__item _icon-stol">
-                      <a class="header-button-popap__link _icon-arrow-down" href="#">
-                        Столи</a>
-                      <ul class="header-button-popap-insert__list">
-
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Односпальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Двоспальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Bonnel</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Безпружинні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            з
-                            ефектом
-                            Зима-Літо</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Футони</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Дитячі
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            Економ</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="header-button-popap__item _icon-stilci">
-                      <a class="header-button-popap__link _icon-arrow-down" href="#">
-                        Стільці</a>
-                      <ul class="header-button-popap-insert__list">
-
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Односпальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Двоспальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Bonnel</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Безпружинні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            з
-                            ефектом
-                            Зима-Літо</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Футони</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Дитячі
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            Економ</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="header-button-popap__item _icon-mstiny">
-                      <a class="header-button-popap__link _icon-arrow-down" href="#"> Меблеві
-                        стіни</a>
-                      <ul class="header-button-popap-insert__list">
-
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Односпальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Двоспальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Bonnel</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Безпружинні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            з
-                            ефектом
-                            Зима-Літо</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Футони</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Дитячі
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            Економ</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="header-button-popap__item _icon-kuhni">
-                      <a class="header-button-popap__link _icon-arrow-down" href="#">
-                        Кухні</a>
-                      <ul class="header-button-popap-insert__list">
-
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Односпальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Двоспальні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Bonnel</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Пружинний
-                            блок
-                            Pocket
-                            Spring</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Безпружинні
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            з
-                            ефектом
-                            Зима-Літо</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Футони</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Дитячі
-                            матраци</a>
-                        </li>
-                        <li class="header-button-popap-insert__item">
-                          <a href="#" class="header-button-popap-insert__link">
-                            Матраци
-                            Економ</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-
+              <div class="header-top-consultation__language _icon-arrow-down">
+                <a>UA</a>
+                <div class="header-top-consultation__active-language">
+                  <a>EN</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="header-main__search header-main-search">
-            <label class="header-main-search__label" for="search">
-            </label>
-            <input placeholder="Пошук товарів" id="search" type="text">
-            <div class="header-main-search__icon _icon-search"></div>
-          </div>
 
-          <div class="header-main__tell header-main-tell">
-            <div class="header-main-tell__icon _icon-call ">
+        </div>
+        <div class="header-main">
+          <div class="header-main__container">
+            <div class="header-main__burger header-main-burger">
+              <div class="header-main-burger__border"></div>
+              <div class="header-main-burger__border"></div>
+              <div class="header-main-burger__border"></div>
             </div>
-            <div class="header-main-tell__info header-main-tell-info">
-              <div class="header-main-tell-info__text">Щодня з 9:00 до 18:00
+            <div class="header-main__menu-burger"></div>
+            <div class="header-main__logo header-main-logo">
+              <img src="./images/header/logo-header.svg" alt="">
+            </div>
+            <div class="header-main__catalog header-main-catalog ">
+              <button class="header-main-catalog__button _icon-menu-catalog">Каталог</button>
+              <div class="header-main-catalog__popap header-button-popap">
+                <div class="header-button-popap__wrapper">
+                  <div class="header-button-popap__row">
+                    <ul class="header-button-popap__list">
+                      <li class="header-button-popap__item _icon-lizhka">
+                        <a href="#" class="header-button-popap__link _icon-arrow-down">
+                          Ліжка</a>
+                        <ul class="header-button-popap-insert__list">
+
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Односпальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Двоспальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Bonnel</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Безпружинні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              з
+                              ефектом
+                              Зима-Літо</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Футони</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Дитячі
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              Економ</a>
+                          </li>
+                        </ul>
+
+                      </li>
+                      <li class="header-button-popap__item _icon-beds">
+                        <a class="header-button-popap__link _icon-arrow-down" href="#">
+                          Матраци</a>
+                      </li>
+                      <li class="header-button-popap__item _icon-mm">
+                        <a class="header-button-popap__link _icon-arrow-down" href="#"> М’які
+                          меблі</a>
+                        <ul class="header-button-popap-insert__list">
+
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Односпальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Двоспальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Bonnel</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Безпружинні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              з
+                              ефектом
+                              Зима-Літо</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Футони</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Дитячі
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              Економ</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="header-button-popap__item _icon-shafa">
+                        <a class="header-button-popap__link _icon-arrow-down" href="#">
+                          Шафи</a>
+                        <ul class="header-button-popap-insert__list">
+
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Односпальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Двоспальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Bonnel</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Безпружинні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              з
+                              ефектом
+                              Зима-Літо</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Футони</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Дитячі
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              Економ</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="header-button-popap__item _icon-komod">
+                        <a class="header-button-popap__link _icon-arrow-down" href="#">
+                          Комоди</a>
+                        <ul class="header-button-popap-insert__list">
+
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Односпальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Двоспальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Bonnel</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Безпружинні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              з
+                              ефектом
+                              Зима-Літо</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Футони</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Дитячі
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              Економ</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="header-button-popap__item _icon-tumba">
+                        <a class="header-button-popap__link _icon-arrow-down" href="#">
+                          Тумби</a>
+                        <ul class="header-button-popap-insert__list">
+
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Односпальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Двоспальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Bonnel</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Безпружинні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              з
+                              ефектом
+                              Зима-Літо</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Футони</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Дитячі
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              Економ</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="header-button-popap__item _icon-stol">
+                        <a class="header-button-popap__link _icon-arrow-down" href="#">
+                          Столи</a>
+                        <ul class="header-button-popap-insert__list">
+
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Односпальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Двоспальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Bonnel</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Безпружинні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              з
+                              ефектом
+                              Зима-Літо</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Футони</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Дитячі
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              Економ</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="header-button-popap__item _icon-stilci">
+                        <a class="header-button-popap__link _icon-arrow-down" href="#">
+                          Стільці</a>
+                        <ul class="header-button-popap-insert__list">
+
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Односпальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Двоспальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Bonnel</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Безпружинні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              з
+                              ефектом
+                              Зима-Літо</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Футони</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Дитячі
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              Економ</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="header-button-popap__item _icon-mstiny">
+                        <a class="header-button-popap__link _icon-arrow-down" href="#"> Меблеві
+                          стіни</a>
+                        <ul class="header-button-popap-insert__list">
+
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Односпальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Двоспальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Bonnel</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Безпружинні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              з
+                              ефектом
+                              Зима-Літо</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Футони</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Дитячі
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              Економ</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="header-button-popap__item _icon-kuhni">
+                        <a class="header-button-popap__link _icon-arrow-down" href="#">
+                          Кухні</a>
+                        <ul class="header-button-popap-insert__list">
+
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Односпальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Двоспальні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Bonnel</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Пружинний
+                              блок
+                              Pocket
+                              Spring</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Безпружинні
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              з
+                              ефектом
+                              Зима-Літо</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Футони</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Дитячі
+                              матраци</a>
+                          </li>
+                          <li class="header-button-popap-insert__item">
+                            <a href="#" class="header-button-popap-insert__link">
+                              Матраци
+                              Економ</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
               </div>
-              <a href="tel:0679294545" class="header-main-tell-info__number">067 929-45-45</a>
-              <div class="header-main-tell-info__popap ">
-                <a class="header-main-tell-info__number" href="tel:0679294545">050 133-45-45
-                </a>
-                <a class="header-main-tell-info__number" href="tel:0679294545">093 170-75-45</a>
-                <a class="header-main-tell-info__number" href="tel:0679294545">093 170-75-45</a>
-                <div class="header-main-tell-info__call-me">Перезвоніть
-                  мені</div>
+            </div>
+
+            <div class="header-main__search header-main-search">
+              <label class="header-main-search__label" for="search">
+              </label>
+              <input placeholder="Пошук товарів" id="search" type="text">
+              <div class="header-main-search__icon _icon-search"></div>
+            </div>
+
+            <div class="header-main__tell header-main-tell">
+              <div class="header-main-tell__icon _icon-call ">
               </div>
-            </div>
-            <div class="header-main-tell__arrow _icon-arrow-down">
-              <span class="header-main-tell__arrow-popap _icon-arrow-down"></span>
+              <div class="header-main-tell__info header-main-tell-info">
+                <div class="header-main-tell-info__text">Щодня з 9:00 до 18:00
+                </div>
+                <a href="tel:0679294545" class="header-main-tell-info__number">067 929-45-45</a>
+                <div class="header-main-tell-info__popap ">
+                  <a class="header-main-tell-info__number" href="tel:0679294545">050 133-45-45
+                  </a>
+                  <a class="header-main-tell-info__number" href="tel:0679294545">093 170-75-45</a>
+                  <a class="header-main-tell-info__number" href="tel:0679294545">093 170-75-45</a>
+                  <div class="header-main-tell-info__call-me">Перезвоніть
+                    мені</div>
+                </div>
+              </div>
+              <div class="header-main-tell__arrow _icon-arrow-down">
+                <span class="header-main-tell__arrow-popap _icon-arrow-down"></span>
+              </div>
+
             </div>
 
-          </div>
-
-          <div class="header-main__favorite header-main-favorite">
-            <div class="header-main-favorite__like _icon-likes"></div>
-            <div class="header-main-favorite__basket _icon-basket   "></div>
+            <div class="header-main__favorite header-main-favorite">
+              <div class="header-main-favorite__like _icon-likes"></div>
+              <div class="header-main-favorite__basket _icon-basket   "></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="header-bottom ">
-        <div class="header-bottom__container">
-          <div class="header-bottom__offers header-bottom-offers">
-            <ul class="header-bottom-offers__list">
-              <li class="header-bottom-offers__item _icon-star">
-                <a href="#" class="header-bottom-offers__link">Акції</a>
-              </li>
-              <li class="header-bottom-offers__item _icon-percent">
-                <a href="#" class="header-bottom-offers__link">Розпродаж</a>
-              </li>
-              <li class="header-bottom-offers__item _icon-credit">
-                <a href="#" class="header-bottom-offers__link">Купити в
-                  кредит</a>
-              </li>
-            </ul>
-          </div>
-          <div class="header-bottom__products header-bottom-products">
-            <ul class="header-bottom-products__list">
-              <li class="header-bottom-products__item">
-                <a href="#" class="header-bottom-products__link">Дитяча</a>
-              </li>
-              <li class="header-bottom-products__item">
-                <a href="#" class="header-bottom-products__link">Кухня</a>
-              </li>
-              <li class="header-bottom-products__item">
-                <a href="#" class="header-bottom-products__link">Ванна</a>
-              </li>
-              <li class="header-bottom-products__item">
-                <a href="#" class="header-bottom-products__link">Спальня</a>
-              </li>
-              <li class="header-bottom-products__item">
-                <a href="#" class="header-bottom-products__link">Передпокій</a>
-              </li>
-              <li class="header-bottom-products__item">
-                <a href="#" class="header-bottom-products__link">Вітальня</a>
-              </li>
-              <li class="header-bottom-products__item">
-                <a href="#" class="header-bottom-products__link">Офіс</a>
-              </li>
-            </ul>
+        <div class="header-bottom ">
+          <div class="header-bottom__container">
+            <div class="header-bottom__offers header-bottom-offers">
+              <ul class="header-bottom-offers__list">
+                <li class="header-bottom-offers__item _icon-star">
+                  <a href="#" class="header-bottom-offers__link">Акції</a>
+                </li>
+                <li class="header-bottom-offers__item _icon-percent">
+                  <a href="#" class="header-bottom-offers__link">Розпродаж</a>
+                </li>
+                <li class="header-bottom-offers__item _icon-credit">
+                  <a href="#" class="header-bottom-offers__link">Купити в
+                    кредит</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-bottom__products header-bottom-products">
+              <ul class="header-bottom-products__list">
+                <li class="header-bottom-products__item">
+                  <a href="#" class="header-bottom-products__link">Дитяча</a>
+                </li>
+                <li class="header-bottom-products__item">
+                  <a href="#" class="header-bottom-products__link">Кухня</a>
+                </li>
+                <li class="header-bottom-products__item">
+                  <a href="#" class="header-bottom-products__link">Ванна</a>
+                </li>
+                <li class="header-bottom-products__item">
+                  <a href="#" class="header-bottom-products__link">Спальня</a>
+                </li>
+                <li class="header-bottom-products__item">
+                  <a href="#" class="header-bottom-products__link">Передпокій</a>
+                </li>
+                <li class="header-bottom-products__item">
+                  <a href="#" class="header-bottom-products__link">Вітальня</a>
+                </li>
+                <li class="header-bottom-products__item">
+                  <a href="#" class="header-bottom-products__link">Офіс</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="header-search">
-        <div class="header-search__container">
-          <input class="header-search__input" type="text">
+        <div class="header-search">
+          <div class="header-search__container">
+            <input class="header-search__input" type="text">
+          </div>
         </div>
       </div>
     </header>
-    <main class="__container">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis repellendus consequatur, fugit
-      saepe
-      blanditiis aliquam maxime perspiciatis voluptatibus, libero pariatur atque, rem quam nesciunt
-      asperiores
-      possimus soluta unde non assumenda!
+    <main>
+      <section class="top">
+        <div class="top__container">
+          <div class="top__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="./images/top-slider.png" alt=""></div>
+              <div class="swiper-slide"><img src="./images/top-slider.png" alt=""></div>
+              <div class="swiper-slide"><img src="./images/top-slider.png" alt=""></div>
+              <div class="swiper-slide"><img src="./images/top-slider.png" alt=""></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <article class="categorys">
+        <div class="categorys__container">
+          <div class="categorys__title">Популярні категорії</div>
+          <div class="categorys__grid">
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">Ліжка</div>
+                <div class="cart-category-top__num">54</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-0.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">Матраци</div>
+                <div class="cart-category-top__num">30</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-1.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">М'які меблі</div>
+                <div class="cart-category-top__num">196</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-2.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">Шафи</div>
+                <div class="cart-category-top__num">79</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-3.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">Комоди</div>
+                <div class="cart-category-top__num">54</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-4.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">Тумби</div>
+                <div class="cart-category-top__num">64</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-5.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">Столи</div>
+                <div class="cart-category-top__num">35</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-6.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">Стільці</div>
+                <div class="cart-category-top__num">89</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-7.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">Меблеві стіни</div>
+                <div class="cart-category-top__num">24</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-8.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+            <a href="#" class="categorys__cart cart-category">
+              <div class="cart-category__top cart-category-top">
+                <div class="cart-category-top__title">Кухні</div>
+                <div class="cart-category-top__num">30</div>
+              </div>
+              <div class="cart-category__image"><img src="./images/categorys/img-9.png" alt="img-category"></div>
+              <div class="cart-category__more-arrow"><span></span></div>
+            </a>
+          </div>
+        </div>
+      </article>
     </main>
     <footer>
       <div class="footer__wrapper">
@@ -763,7 +868,7 @@
                 <div class="wrapper-info-footer__row">
 
                   <div class="wrapper-info-footer__block">
-                    <div class="wrapper-info-footer__title">Інформація</div>
+                    <div class="wrapper-info-footer__title  _icon-arrow-down">Інформація</div>
                     <ul class="wrapper-info-footer__list">
                       <li class="wrapper-info-footer__item">
                         <a href="#" class="wrapper-info-footer__link">Про нас
@@ -797,8 +902,8 @@
                   </div>
 
                   <div class="wrapper-info-footer__block">
-                    <div class="wrapper-info-footer__title">Категорії</div>
-                    <ul class="wrapper-info-footer__list">
+                    <div class="wrapper-info-footer__title  active _icon-arrow-down">Категорії</div>
+                    <ul class="wrapper-info-footer__list active">
                       <li class="wrapper-info-footer__item">
                         <a href="#" class="wrapper-info-footer__link"> Ліжка
                         </a>
@@ -844,7 +949,7 @@
                   </div>
 
                   <div class="wrapper-info-footer__block">
-                    <div class="wrapper-info-footer__title">Клієнтам</div>
+                    <div class="wrapper-info-footer__title _icon-arrow-down">Клієнтам</div>
                     <ul class="wrapper-info-footer__list">
                       <li class="wrapper-info-footer__item">
                         <a href="#" class="wrapper-info-footer__link">Акції
@@ -908,6 +1013,8 @@
     </footer>
 
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 
 </html>

@@ -6,6 +6,7 @@ const isTouchScreen = window.matchMedia("(any-hover:none)").matches
 window.addEventListener("load", windowLoaded)
 
 function windowLoaded() {
+  //===========================
   function documentActions(e) {
     const el = e.target
     // ========header-language============
@@ -74,14 +75,19 @@ function windowLoaded() {
     //==================cheader-atalog-button==================
 
     if (el.closest(".header-main-catalog__button")) {
+      const button = document.querySelector(".header-main-catalog__button")
       const searchEl = document.querySelector(".header-main-catalog")
       searchEl.classList.toggle("active")
+      button.classList.toggle("active")
     }
     if (
       !el.closest(".header-main-catalog__button") &&
       !el.closest(".header-button-popap__list")
     ) {
       const searchEl = document.querySelector(".header-main-catalog")
+      const button = document.querySelector(".header-main-catalog__button")
+      button.classList.remove("active")
+
       searchEl.classList.remove("active")
     }
     //=================cheader-atalog-button-list===========================
@@ -111,8 +117,33 @@ function windowLoaded() {
         }
       }
     }
+    //===================footer-list-active==================
+    if (el.closest(".wrapper-info-footer__block")) {
+      const allElements = document.querySelectorAll(
+        ".wrapper-info-footer__list"
+      )
 
-    //================================
+      const currentParrentItem = el.closest(".wrapper-info-footer__block")
+      const currentChildrenItem = currentParrentItem.querySelector(
+        ".wrapper-info-footer__list"
+      )
+
+      const allElementsArrow = document.querySelectorAll(
+        ".wrapper-info-footer__title"
+      )
+      const currentChildrenArrow = currentParrentItem.querySelector(
+        ".wrapper-info-footer__title"
+      )
+
+      if (currentChildrenItem && currentChildrenArrow) {
+        allElementsArrow.forEach((el) => el.classList.remove("active"))
+        allElements.forEach((el) => el.classList.remove("active"))
+        currentChildrenItem.classList.add("active")
+        currentChildrenArrow.classList.add("active")
+      }
+    }
+
+    //=================================================
   }
   document.addEventListener("click", (e) => documentActions(e))
 
@@ -166,15 +197,55 @@ function windowLoaded() {
     const footerAdressContainer = document.querySelector(".footer__adress")
     const footerInfoContainer = document.querySelector(".footer-info__wrapper")
     const footerMainContainer = document.querySelector(".footer__row")
+    const footerSocialsContainer = document.querySelector(".footer__socials")
+    const footerLogo = document.querySelector(".footer-socials__logo")
+    const footerParrentLogo = document.querySelector(".footer-socials__row")
 
-    if (screenWidth < 1100) {
+    //==================
+
+    if (screenWidth < 991.98) {
+      footerInfoContainer.prepend(footerLogo)
       footerInfoContainer.append(footerAdressContainer)
+      footerInfoContainer.append(footerSocialsContainer)
     } else {
+      footerParrentLogo.prepend(footerLogo)
+      footerMainContainer.prepend(footerSocialsContainer)
+      footerInfoContainer.append(footerAdressContainer)
+    }
+
+    if (screenWidth >= 991.98 && screenWidth < 1100) {
+      footerInfoContainer.append(footerAdressContainer)
+    } else if (screenWidth >= 1100) {
       footerMainContainer.append(footerAdressContainer)
     }
+    //==================change-img-top-slider=============================
+    if (screenWidth < 767.98) {
+      document.querySelectorAll(".swiper-slide img").forEach((img) => {
+        img.src = "./images/top-slider767.png" // Для мобільних
+      })
+    }
+    if (screenWidth > 767.98) {
+      document.querySelectorAll(".swiper-slide img").forEach((img) => {
+        img.src = "./images/top-slider.png" // Для десктопа
+      })
+    }
+    //===============================================
   }
-
   handleScreenChange()
-
   window.addEventListener("resize", handleScreenChange)
+  //========swiper-top=============
+  const swiperMainTop = new Swiper(".top__swiper", {
+    loop: true, // Безкінечний слайдер
+    slidesPerView: 1, // Один слайд на екрані
+    spaceBetween: 20, // Відстань між слайдами
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true, // Дозволяє натискати на точки
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  })
+  //=============================
 }

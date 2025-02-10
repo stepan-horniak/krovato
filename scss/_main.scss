@@ -1,0 +1,212 @@
+.top {
+  // .top__container
+
+  &__container {
+    height: 70svh;
+    overflow: hidden;
+    padding-top: toRem(30);
+    @media (max-width: toEm(1250)) {
+      height: 60svh;
+    }
+    @media (max-width: toEm(1100)) {
+      height: 50svh;
+    }
+    @media (max-width: toEm(767.98)) {
+      height: 100svh;
+    }
+  }
+
+  // .top__swiper
+
+  &__swiper {
+    max-width: toRem(1290);
+    max-height: toRem(420) !important;
+    position: relative;
+    @media (max-width: toEm(767.98)) {
+      max-height: toRem(600) !important;
+      text-align: center !important;
+    }
+  }
+}
+.swiper-wrapper {
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  min-height: toRem(270);
+  @media (max-width: toEm(767.98)) {
+    width: auto;
+    max-width: 100% !important;
+  }
+}
+.swiper-button-prev {
+  width: 60px !important;
+  height: 60px !important;
+  background-color: white;
+  border-radius: 50%;
+  left: 20px !important;
+  &::after {
+    font-size: 20px !important;
+    color: $yellowColor;
+  }
+  @media (max-width: toEm(767.98)) {
+    display: none !important;
+  }
+}
+.swiper-button-next {
+  width: 60px !important;
+  height: 60px !important;
+  background-color: white;
+  border-radius: 50%;
+  right: 20px !important;
+  &::after {
+    font-size: 20px !important;
+    color: $yellowColor;
+  }
+  @media (max-width: toEm(767.98)) {
+    display: none !important;
+  }
+}
+.swiper-pagination-bullet {
+  width: toRem(15) !important;
+  height: toRem(15) !important;
+  border: 3px solid white;
+  border-radius: 50%;
+  opacity: 1 !important;
+  background-color: white !important;
+  transition: opacity 0.3s, transform 0.3s !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  transform: scale(1.2) !important;
+  background-color: $yellowColor !important;
+}
+//=================categorys=======================
+.categorys {
+  // .categorys__container
+
+  &__container {
+    padding-top: toRem(70);
+    padding-bottom: toRem(70);
+  }
+
+  //categorys__title
+
+  &__title {
+    font-weight: 600;
+    font-size: toRem(40);
+    margin-bottom: toRem(40);
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.01);
+    }
+    @media (max-width: toEm(767.98)) {
+      font-size: toRem(30);
+    }
+  }
+
+  // .categorys__grid
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(toRem(250), 1fr));
+    row-gap: toRem(24);
+    column-gap: toRem(10);
+    @media (max-width: toEm(767.98)) {
+      grid-template-columns: repeat(auto-fit, minmax(toRem(180), 1fr));
+    }
+  }
+
+  // .categorys__cart
+
+  &__cart {
+  }
+}
+.cart-category {
+  background-color: $white;
+  border-radius: toRem(8);
+  padding: toRem(20);
+  position: relative;
+  overflow: hidden;
+  box-shadow: -3px 4px 15px 0px #0000000f;
+
+  // .cart-category__top
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .cart-category__image
+
+  &__image {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      // max-height: 600px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: $lightColor;
+      z-index: 1;
+    }
+    & > img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .cart-category__more-arrow
+
+  &__more-arrow {
+    position: absolute;
+    bottom: toRem(20);
+    right: toRem(20);
+    z-index: 2;
+    width: toRem(50);
+    height: toRem(50);
+    border-radius: 50%;
+    border: toRem(2) solid $yellowColor;
+    & > span {
+    }
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.2) translate(toRem(3), toRem(-3));
+    }
+    @media (max-width: toEm(767.98)) {
+      width: toRem(40);
+      height: toRem(40);
+    }
+  }
+}
+.cart-category-top {
+  // .cart-category-top__title
+
+  &__title {
+    font-weight: 600;
+    font-size: toRem(20);
+    @media (max-width: toEm(767.98)) {
+      font-size: toRem(19);
+    }
+  }
+
+  // .cart-category-top__num
+
+  &__num {
+    font-weight: 600;
+    font-size: toRem(20);
+    color: $lightGreyColor;
+    @media (max-width: toEm(767.98)) {
+      font-size: toRem(19);
+    }
+  }
+}

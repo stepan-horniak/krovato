@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icons";
-  src: url("../fonts-icon/icons.eot?mkldqm");
-  src: url("../fonts-icon/icons.eot?mkldqm#iefix") format("embedded-opentype"),
-    url("../fonts-icon/icons.ttf?mkldqm") format("truetype"),
-    url("../fonts-icon/icons.woff?mkldqm") format("woff"),
-    url("../fonts-icon/icons.svg?mkldqm#icons") format("svg");
+  src: url("../fonts-icon/icons.eot?e0xaf7");
+  src: url("../fonts-icon/icons.eot?e0xaf7#iefix") format("embedded-opentype"),
+    url("../fonts-icon/icons.ttf?e0xaf7") format("truetype"),
+    url("../fonts-icon/icons.woff?e0xaf7") format("woff"),
+    url("../fonts-icon/icons.svg?e0xaf7#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,78 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+._icon-twoo:before {
+  content: "\e91a";
+}
+._icon-message:before {
+  content: "\e91b";
+}
+._icon-logo:before {
+  content: "\e91c";
+}
+._icon-in-stock:before {
+  content: "\e91d";
+}
+._icon-coment:before {
+  content: "\e91e";
+}
+._icon-Vector-3:before {
+  content: "\e91f";
+}
+._icon-two-arrow:before {
+  content: "\e920";
+}
+._icon-load:before {
+  content: "\e921";
+}
+._icon-question:before {
+  content: "\e922";
+}
+._icon-Vector-7:before {
+  content: "\e923";
+}
+._icon-coments:before {
+  content: "\e924";
+}
+._icon-exit:before {
+  content: "\e925";
+}
+._icon-like:before {
+  content: "\e926";
+}
+._icon-arrow-long:before {
+  content: "\e927";
+}
+._icon-arrow-long-right:before {
+  content: "\e928";
+}
+._icon-label:before {
+  content: "\e929";
+}
+._icon-star-half:before {
+  content: "\e92a";
+}
+._icon-star-border:before {
+  content: "\e92b";
+}
+._icon-cursor:before {
+  content: "\e92c";
+}
+._icon-cart:before {
+  content: "\e92d";
+}
+._icon-mail:before {
+  content: "\e92e";
+}
+._icon-firter:before {
+  content: "\e92f";
+}
+._icon-cross:before {
+  content: "\e930";
+}
+._icon-user:before {
+  content: "\e931";
+}
 ._icon-beds:before {
   content: "\e900";
 }
