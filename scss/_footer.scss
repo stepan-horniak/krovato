@@ -94,9 +94,9 @@
     gap: toRem(10);
   }
 
-  // .footer-socials__cart
+  // .footer-socials__card
 
-  &__cart {
+  &__card {
     display: flex;
     gap: toRem(20);
   }
@@ -210,14 +210,14 @@
   }
 }
 
-.footer-socials-cart {
-  // .footer-socials-cart__visa
+.footer-socials-card {
+  // .footer-socials-card__visa
 
   &__visa {
     font-size: toRem(30);
   }
 
-  // .footer-socials-cart__mastercard
+  // .footer-socials-card__mastercard
 
   &__mastercard {
     font-size: toRem(30);
