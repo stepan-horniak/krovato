@@ -220,12 +220,12 @@ function windowLoaded() {
     }
     //==================change-img-top-slider=============================
     if (screenWidth < 767.98) {
-      document.querySelectorAll(".swiper-slide img").forEach((img) => {
+      document.querySelectorAll(".top__swiper-slide img").forEach((img) => {
         img.src = "./images/top-slider767.png" // Для мобільних
       })
     }
     if (screenWidth > 767.98) {
-      document.querySelectorAll(".swiper-slide img").forEach((img) => {
+      document.querySelectorAll(".top__swiper-slide img").forEach((img) => {
         img.src = "./images/top-slider.png" // Для десктопа
       })
     }
@@ -233,18 +233,80 @@ function windowLoaded() {
   }
   handleScreenChange()
   window.addEventListener("resize", handleScreenChange)
-  //========swiper-top=============
+  //========slider-top=============
+  // Ініціалізація слайдера для розділу "Top"
   const swiperMainTop = new Swiper(".top__swiper", {
     loop: true, // Безкінечний слайдер
     slidesPerView: 1, // Один слайд на екрані
     spaceBetween: 20, // Відстань між слайдами
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true, // Дозволяє натискати на точки
+      el: ".top__swiper-pagination", // Пагінація
+      clickable: true, // Дозволяє натискати на точки пагінації
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".top__swiper-button-next", // Кнопка для переходу до наступного слайду
+      prevEl: ".top__swiper-button-prev", // Кнопка для повернення до попереднього слайду
+    },
+  })
+  //========slider-Shares=============
+
+  const swiperMainShares = new Swiper(".shares__swiper", {
+    loop: true, // Безкінечний слайдер
+    slidesPerView: 3, // Три слайди на екрані
+    spaceBetween: 30, // Відстань між слайдами
+    navigation: {
+      nextEl: ".shares__swiper-button-next", // Кнопка для переходу до наступного слайду
+      prevEl: ".shares__swiper-button-prev", // Кнопка для повернення до попереднього слайду
+    },
+    breakpoints: {
+      // Медіа-запит для екранів до 460px
+      319.98: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+          el: ".shares__swiper-pagination", // Пагінація
+          clickable: true, // Дозволяє натискати на точки пагінації
+        },
+      },
+      // Медіа-запит для екранів до 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // Медіа-запит для екранів до 1024px
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+    },
+  })
+  //================reviews-swiper=========================
+
+  //================blogs-swiper=========================
+  const swiperMainBlogs = new Swiper(".blogs__swiper", {
+    loop: true, // Безкінечний слайдер
+    slidesPerView: 3, // Три слайди на екрані
+    spaceBetween: 30, // Відстань між слайдами
+    navigation: {
+      nextEl: ".blogs__swiper-button-next", // Кнопка для переходу до наступного слайду
+      prevEl: ".blogs__swiper-button-prev", // Кнопка для повернення до попереднього слайду
+    },
+    breakpoints: {
+      // Медіа-запит для екранів до 460px
+      319.98: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // Медіа-запит для екранів до 768px
+      550: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // Медіа-запит для екранів до 1024px
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
     },
   })
   //=============================
