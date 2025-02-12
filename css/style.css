@@ -2798,6 +2798,10 @@ body {
   cursor: pointer;
 }
 
+.slider-reviews__swiper-slide {
+  -ms-flex-preferred-size: 450px;
+      flex-basis: 450px;
+}
 .reviews-slider-scroll {
   position: absolute;
   bottom: -2.9375rem;
