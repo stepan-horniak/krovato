@@ -1,7 +1,4 @@
-// Строгий режим
 "use strict"
-// Touch Screen?
-const isTouchScreen = window.matchMedia("(any-hover:none)").matches
 
 window.addEventListener("load", windowLoaded)
 
@@ -143,6 +140,11 @@ function windowLoaded() {
       }
     }
 
+    //==========================main-button=======================
+    if (el.closest(".main__button")) {
+      const textElement = document.querySelector(".main__text")
+      textElement.classList.toggle("active")
+    }
     //=================================================
   }
   document.addEventListener("click", (e) => documentActions(e))
@@ -229,12 +231,25 @@ function windowLoaded() {
         img.src = "./images/top-slider.png" // Для десктопа
       })
     }
+    //====================blogs===========================
+    const blogsParrent = document.querySelectorAll(".blogs__swiper-slide")
+    const blogsItems = document.querySelectorAll(".blogs__wrapper")
+    const blogsContainer = document.querySelector(".blogs__after-swiper")
+    const blogsButton = document.querySelector(".blogs-title__text")
+    const blogsButtonParrent = document.querySelector(".blogs-control__title")
+
+    if (screenWidth < 550) {
+      blogsItems.forEach((el) => blogsContainer.append(el))
+      blogsContainer.append(blogsButton)
+    } else {
+      blogsParrent.forEach((el, index) => el.append(blogsItems[index]))
+      blogsButtonParrent.append(blogsButton)
+    }
     //===============================================
   }
   handleScreenChange()
   window.addEventListener("resize", handleScreenChange)
   //========slider-top=============
-  // Ініціалізація слайдера для розділу "Top"
   const swiperMainTop = new Swiper(".top__swiper", {
     loop: true, // Безкінечний слайдер
     slidesPerView: 1, // Один слайд на екрані
@@ -281,7 +296,47 @@ function windowLoaded() {
     },
   })
   //================reviews-swiper=========================
+  const swiperReviews = new Swiper(".slider-reviews__swiper", {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 3, //"auto"
+    spaceBetween: 30,
+    // freeMode: true,
+    scrollbar: {
+      el: ".reviews-slider-scroll",
+      dragClass: "reviews-slider-scroll-image",
+      hide: false,
+      dragSize: 50,
+      draggable: true,
+    },
+    // Navigation arrows
+    /*
+		navigation: {
+			nextEl: '.block-header__arrow--sale-right',
+			prevEl: '.block-header__arrow--sale-left',
+		},
+		*/
 
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      460: {
+        slidesPerView: 1.2,
+        spaceBetween: 30,
+      },
+      950: {
+        slidesPerView: 2.2,
+        spaceBetween: 20,
+      },
+      1050: {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+      },
+    },
+  })
   //================blogs-swiper=========================
   const swiperMainBlogs = new Swiper(".blogs__swiper", {
     loop: true, // Безкінечний слайдер
