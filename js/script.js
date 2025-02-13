@@ -297,45 +297,39 @@ function windowLoaded() {
   })
   //================reviews-swiper=========================
   const swiperReviews = new Swiper(".slider-reviews__swiper", {
-    // Optional parameters
-    // loop: true,
-    slidesPerView: 3, //"auto"
+    slidesPerView: "auto",
     spaceBetween: 30,
-    // freeMode: true,
     scrollbar: {
       el: ".reviews-slider-scroll",
       dragClass: "reviews-slider-scroll-image",
       hide: false,
       dragSize: 50,
       draggable: true,
+      clickable: true,
     },
-    // Navigation arrows
-    /*
-		navigation: {
-			nextEl: '.block-header__arrow--sale-right',
-			prevEl: '.block-header__arrow--sale-left',
-		},
-		*/
-
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
-      460: {
-        slidesPerView: 1.2,
-        spaceBetween: 30,
-      },
-      950: {
-        slidesPerView: 2.2,
-        spaceBetween: 20,
-      },
-      1050: {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-      },
+    pagination: {
+      el: ".slider-reviews__swiper-pagination", // Пагінація
+      clickable: true, // Дозволяє натискати на точки пагінації
     },
+    // breakpoints: {
+    //   // when window width is >= 320px
+    //   320: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 15,
+    //   },
+    //   460: {
+    //     slidesPerView: 1.2,
+    //     spaceBetween: 30,
+    //   },
+    //   950: {
+    //     slidesPerView: 2.2,
+    //     spaceBetween: 20,
+    //   },
+    //   1050: {
+    //     slidesPerView: "auto",
+    //     spaceBetween: 30,
+    //   },
+    // },
   })
   //================blogs-swiper=========================
   const swiperMainBlogs = new Swiper(".blogs__swiper", {
