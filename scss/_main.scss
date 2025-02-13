@@ -129,9 +129,7 @@
     font-size: toRem(40);
     margin-bottom: toRem(40);
     transition: all 0.3s;
-    &:hover {
-      transform: scale(1.01);
-    }
+
     @media (max-width: toEm(991.98)) {
       font-size: toRem(30);
     }
@@ -159,15 +157,12 @@
   border-radius: toRem(8);
   position: relative;
   overflow: hidden;
-  box-shadow: -3px 4px 15px 0px #0000000f;
+  box-shadow: toRem(-3) toRem(4) toRem(15) 0 #0000000f;
   transition: all 0.3s;
-  @media (any-hover: hover) {
-    &:hover {
-      transform: scale(1.02);
-      .card-category__more-arrow {
-        transform: scale(1.2) translate(toRem(4), toRem(-4));
-      }
-    }
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    box-shadow: toRem(-3) toRem(4) toRem(15) 0 rgba(0, 0, 0, 0.5);
   }
   // .card-category__top
 
@@ -176,11 +171,16 @@
     align-items: center;
     justify-content: space-between;
     padding: toRem(20) toRem(20) 0 toRem(20);
+    flex: 1 1 auto;
+    align-items: flex-start;
+    position: relative;
+    z-index: 3;
   }
 
   // .card-category__image
 
   &__image {
+    cursor: default;
     margin-top: toRem(-40);
     &::before {
       content: "";
@@ -215,6 +215,7 @@
     border-radius: 50%;
     border: toRem(2) solid $yellowColor;
     transition: all 0.3s;
+    cursor: pointer;
 
     &::before {
       position: absolute;
@@ -224,9 +225,9 @@
       font-size: toRem(21);
       color: $yellowColor;
       transition: all 0.3s;
-      &:hover {
-        transform: scale(1.2) translate(toRem(3), toRem(-3));
-      }
+    }
+    &:hover {
+      transform: scale(1.2) translate(toRem(3), toRem(-3));
     }
     @media (max-width: toEm(767.98)) {
       width: toRem(40);
@@ -342,22 +343,32 @@
     font-size: toRem(19);
     color: $yellowColor;
     transition: all 0.3s;
+    white-space: nowrap;
 
     &::before {
       font-size: toRem(19);
       color: $yellowColor;
       transition: all 0.3s;
     }
-    @media (max-width: toEm(767.98)) {
-      display: none;
+
+    position: relative;
+    &::after {
+      content: "";
+      height: toRem(2);
+      width: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: 0.3s;
+      background-color: $yellowColor;
     }
     &:hover {
-      &::before {
-        transform: translate(toRem(3), toRem(-3));
+      transition: 0.3s;
+      color: $yellowColor;
+      &::after {
+        content: "";
+        width: 100%;
       }
-    }
-    &:hover {
-      transform: scale(1.05);
     }
   }
 }
@@ -371,10 +382,8 @@
   gap: toRem(10);
   background-color: $white;
   transition: all 0.3s;
-  @media (any-hover: hover) {
-    &:hover {
-      transform: scale(1.02);
-    }
+  &:hover {
+    box-shadow: toRem(-3) toRem(4) toRem(15) 0 rgba(0, 0, 0, 0.5);
   }
   // .card-popular__image
 
@@ -456,13 +465,24 @@
     background-color: $lightColor;
     border-radius: 50%;
     position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+
     &::before {
+      transition: all 0.3s;
+
       color: $lightGreyColor;
       font-size: toRem(26);
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+    &:hover {
+      background-color: $yellowColor;
+      &::before {
+        color: white;
+      }
     }
   }
 
@@ -474,13 +494,20 @@
     background-color: $yellowColor;
     border-radius: 50%;
     position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
     &::before {
+      transition: all 0.3s;
+
       color: $white;
       font-size: toRem(26);
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+    &:hover {
+      background-color: $hoverButton;
     }
   }
 }
@@ -671,19 +698,31 @@
     font-size: toRem(19);
     color: $yellowColor;
     transition: all 0.3s;
+    white-space: nowrap;
     &::before {
       font-size: toRem(19);
       color: $yellowColor;
       transition: all 0.3s;
     }
 
-    &:hover {
-      &::before {
-        transform: translate(toRem(3), toRem(-3));
-      }
+    position: relative;
+    &::after {
+      content: "";
+      height: toRem(2);
+      width: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: 0.3s;
+      background-color: $yellowColor;
     }
     &:hover {
-      transform: scale(1.05);
+      transition: 0.3s;
+      color: $yellowColor;
+      &::after {
+        content: "";
+        width: 100%;
+      }
     }
   }
 }
@@ -831,11 +870,8 @@
   // .scores-section-reviews__score
 
   &__score {
+    cursor: pointer;
     transition: all 0.3s;
-    &:hover {
-      transform: scale(1.3);
-      cursor: pointer;
-    }
   }
 
   // .scores-section-reviews__star
@@ -845,11 +881,11 @@
     align-items: center;
     gap: toRem(4);
     font-size: toRem(20);
+    cursor: pointer;
     & > * {
       transition: all 0.3s;
       &:hover {
-        transform: scale(1.3);
-        cursor: pointer;
+        color: $hoverButton;
       }
     }
   }
@@ -871,13 +907,13 @@
     display: flex;
     align-items: center;
     gap: toRem(13);
+    cursor: pointer;
     &::before {
       font-size: toRem(24);
     }
     transition: all 0.3s;
     &:hover {
-      transform: scale(1.05);
-      cursor: pointer;
+      background-color: $hoverButton;
     }
   }
 
@@ -888,13 +924,18 @@
     display: flex;
     align-items: center;
     gap: toRem(13);
+    border-radius: toRem(8);
+
+    cursor: pointer;
     &::before {
       font-size: toRem(24);
     }
     transition: all 0.3s;
     &:hover {
-      transform: scale(1.05);
-      cursor: pointer;
+      background-color: $yellowColor;
+      &::before {
+        color: white;
+      }
     }
   }
 }
@@ -1217,9 +1258,6 @@
       min-height: toRem(450);
     }
     transition: all 0.3s;
-    &:hover {
-      transform: scale(1.02);
-    }
   }
 
   // .blogs__image
@@ -1255,18 +1293,11 @@
     font-weight: 600;
     font-size: toRem(19);
     transition: all 0.3s;
+    cursor: pointer;
     &::before {
       font-size: toRem(19);
       color: $yellowColor;
       transition: all 0.3s;
-    }
-    &:hover {
-      &::before {
-        transform: translate(toRem(3), toRem(-3));
-      }
-    }
-    &:hover {
-      transform: scale(1.02);
     }
   }
   &__after-swiper {
@@ -1322,19 +1353,31 @@
     font-size: toRem(19);
     color: $yellowColor;
     transition: all 0.3s;
+    white-space: nowrap;
     &::before {
       font-size: toRem(19);
       color: $yellowColor;
       transition: all 0.3s;
     }
 
-    &:hover {
-      &::before {
-        transform: translate(toRem(3), toRem(-3));
-      }
+    position: relative;
+    &::after {
+      content: "";
+      height: toRem(2);
+      width: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: 0.3s;
+      background-color: $yellowColor;
     }
     &:hover {
-      transform: scale(1.05);
+      transition: 0.3s;
+      color: $yellowColor;
+      &::after {
+        content: "";
+        width: 100%;
+      }
     }
     @media (max-width: toEm(550)) {
       flex-direction: row;
@@ -1391,7 +1434,7 @@
     line-height: 1.87; /* 30/16 */
     height: toRem(267);
     overflow-y: hidden;
-    transition: all 0.3s;
+    transition: all 0.2s;
 
     &::before {
       content: "";
@@ -1400,21 +1443,17 @@
       left: 0;
       width: 100%;
       height: 60px;
-      opacity: 0.8;
-      background-color: $lightColor;
+      background: linear-gradient(
+        to top,
+        rgba($lightColor, 0.8) 0%,
+        rgba($lightColor, 0.7) 50%,
+        rgba($lightColor, 0) 100%
+      );
     }
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 30px;
-      opacity: 0.7;
-      background-color: $lightColor;
-    }
+
     &.active {
-      height: auto;
+      height: 100%;
+      transition: all 0.2s;
 
       &::after,
       &::before {
@@ -1423,7 +1462,8 @@
       & ~ .main__button {
         transform: rotate(180deg);
         &:hover {
-          transform: rotate(180deg) scale(1.2);
+          transform: rotate(180deg);
+          color: $hoverButton;
         }
       }
     }
@@ -1438,9 +1478,10 @@
     bottom: toRem(-45);
     left: 50%;
     transform: translateX(-50%);
-    transition: all 0.3s;
+    transition: all 0.6s;
+    border-radius: 50%;
     &:hover {
-      transform: translateX(-50%) rotate(0deg) scale(1.2);
+      color: $hoverButton;
     }
   }
 }
@@ -1472,9 +1513,6 @@
 
   &__block {
     transition: all 0.3s;
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 }
 .block-delivery {

@@ -236,9 +236,6 @@
   &__visa {
     font-size: toRem(30);
     transition: all 0.3s;
-    &:hover {
-      transform: scale(1.2);
-    }
   }
 
   // .footer-socials-card__mastercard
@@ -246,9 +243,6 @@
   &__mastercard {
     font-size: toRem(30);
     transition: all 0.3s;
-    &:hover {
-      transform: scale(1.2);
-    }
   }
 }
 
@@ -353,6 +347,25 @@
   &__link {
     font-size: toRem(17);
     line-height: 1.5; /* 24/16 */
+    position: relative;
+    &::after {
+      content: "";
+      height: toRem(2);
+      width: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: 0.3s;
+      background-color: $yellowColor;
+    }
+    &:hover {
+      transition: 0.3s;
+      color: $yellowColor;
+      &::after {
+        content: "";
+        width: 100%;
+      }
+    }
   }
 }
 .footer-adress {
@@ -421,11 +434,6 @@
         display: none;
       }
     }
-    &:hover {
-      &::before {
-        transform: scale(1.2);
-      }
-    }
   }
 
   // .footer-adress-number__number
@@ -469,11 +477,6 @@
         display: none;
       }
     }
-    &:hover {
-      &::before {
-        transform: scale(1.2);
-      }
-    }
   }
 }
 .footer-adress-working {
@@ -500,11 +503,6 @@
       padding-left: 0;
       &::before {
         display: none;
-      }
-    }
-    &:hover {
-      &::before {
-        transform: scale(1.2);
       }
     }
   }

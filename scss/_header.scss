@@ -84,10 +84,24 @@ header {
     font-size: toRem(16);
     line-height: 1.875; /* 30/16 */
     transition: 0.3s;
-
+    position: relative;
+    &::before {
+      content: "";
+      height: toRem(2);
+      width: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: 0.3s;
+      background-color: $yellowColor;
+    }
     &:hover {
       transition: 0.3s;
-      transform: scale(1.1);
+      color: $yellowColor;
+      &::before {
+        content: "";
+        width: 100%;
+      }
     }
   }
 }
@@ -138,8 +152,7 @@ header {
       z-index: 2;
     }
     &:hover {
-      transition: 0.3s;
-      transform: scale(1.1);
+      cursor: pointer;
     }
   }
   &__active-language {
@@ -148,6 +161,7 @@ header {
     visibility: hidden;
 
     transition: 0.3s;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -165,6 +179,7 @@ header {
     &:hover {
       transition: 0.3s;
       transform: scale(1.1);
+      cursor: pointer;
     }
     &::before {
       position: absolute;
@@ -183,6 +198,7 @@ header {
     &:hover {
       transition: 0.3s;
       transform: scale(1.1);
+      cursor: pointer;
     }
     & > img {
       width: 100%;
@@ -204,6 +220,7 @@ header {
     &:hover {
       transition: 0.3s;
       transform: scale(1.1);
+      cursor: pointer;
     }
     &::before {
       position: absolute;
@@ -220,14 +237,17 @@ header {
   transition: 0.3s;
 
   position: absolute;
-  top: toRem(0);
+  top: toRem(-10);
   z-index: 1;
   left: toRem(-5);
   padding: toRem(0) toRem(29) toRem(0) toRem(5);
   border-radius: toRem(8);
   background-color: $white;
-  padding-top: 40px;
-  line-height: 24px;
+  padding-top: toRem(40);
+  line-height: 1.5; /* 24/16 */
+  &:hover {
+    cursor: pointer;
+  }
 } //===============================================================
 
 .header-main {
@@ -325,6 +345,9 @@ header {
   // .header-main__tell
 
   &__tell {
+    @media (max-width: toEm(991.98)) {
+      margin-right: toRem(-10);
+    }
   }
 
   // .header-main__favorite
@@ -333,10 +356,11 @@ header {
   }
 }
 .header-main-burger {
-  width: toRem(32);
+  min-width: toRem(32);
   height: toRem(25);
   overflow: hidden;
   position: relative;
+  cursor: pointer;
   // .header-main-burger__border
 
   &__border {
@@ -378,12 +402,14 @@ header {
 }
 
 .header-main-catalog {
+  overflow: auto;
   // .header-main-catalog__button
 
   &__button {
     display: flex;
     align-items: center;
     gap: toRem(10);
+    flex: 0 0 auto;
     color: $white;
     background-color: $yellowColor;
     font-size: toRem(19);
@@ -418,7 +444,7 @@ header {
     }
     &:hover {
       transition: 0.3s;
-      transform: scale(1.05);
+      background-color: $hoverButton;
     }
     &.active {
       &::before {
@@ -436,10 +462,16 @@ header {
     @media (max-width: toEm(767.98)) {
       padding: toRem(6) toRem(20);
       margin-right: auto;
+      &::after {
+        left: toRem(20);
+      }
     }
     @media (max-width: toEm(370)) {
       padding: toRem(5) toRem(10);
       margin-right: auto;
+      &::after {
+        left: toRem(10);
+      }
     }
   }
 }
@@ -451,18 +483,16 @@ header {
   border-radius: toRem(8);
   border: toRem(1) solid $lightGreyColor;
   padding: toRem(10) toRem(15);
-  transition: 0.3s;
+  transition: 0.1s;
+  min-width: toRem(230);
 
-  &:hover {
-    transition: 0.3s;
-    transform: scale(1.05);
-  }
   @media (max-width: toEm(767.98)) {
     width: toRem(50);
     height: toRem(50);
     border-radius: 50%;
     border: toRem(1) solid $yellowColor;
     flex: 0 0 toRem(50);
+    min-width: auto;
   }
 
   // .header-main-search__label
@@ -482,14 +512,17 @@ header {
       font-size: toRem(23);
       right: toRem(12);
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 #search:focus {
   outline: none;
 }
 .header-main-search:has(#search:focus) {
-  border: 2px solid; /* Змінює колір рамки */
-  box-shadow: 0 0 5px $colorRed; /* Додає підсвічування */
+  border: toRem(2) solid; /* Змінює колір рамки */
+  box-shadow: 0 0 toRem(5) $yellowColor; /* Додає підсвічування */
 }
 .header-main-tell {
   display: flex;
@@ -512,10 +545,8 @@ header {
       color: $greyColor;
       font-size: toRem(23);
     }
-    transition: 0.3s;
     &:hover {
-      transition: 0.3s;
-      transform: scale(1.05);
+      cursor: pointer;
     }
   }
 
@@ -535,6 +566,7 @@ header {
     &:hover {
       transition: 0.3s;
       transform: scale(1.2);
+      cursor: pointer;
     }
     @media (max-width: toEm(991.98)) {
       display: none;
@@ -653,7 +685,10 @@ header {
     transition: 0.3s;
     &:hover {
       transition: 0.3s;
-      transform: scale(1.05);
+      background-color: $yellowColor;
+      &::before {
+        color: $white;
+      }
     }
   }
 
@@ -676,7 +711,10 @@ header {
     transition: 0.3s;
     &:hover {
       transition: 0.3s;
-      transform: scale(1.05);
+      background-color: $yellowColor;
+      &::before {
+        color: $white;
+      }
     }
   }
 }
@@ -754,11 +792,6 @@ header {
     @media (max-width: toEm(1100)) {
       gap: toRem(5);
     }
-    transition: 0.3s;
-    &:hover {
-      transition: 0.3s;
-      transform: scale(1.05);
-    }
   }
 
   // .header-bottom-offers__link
@@ -767,6 +800,25 @@ header {
     font-weight: 600;
     font-size: toRem(19);
     line-height: 1.5; /* 24/16 */
+    position: relative;
+    &::before {
+      content: "";
+      height: toRem(2);
+      width: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: 0.3s;
+      background-color: $yellowColor;
+    }
+    &:hover {
+      transition: 0.3s;
+      color: $yellowColor;
+      &::before {
+        content: "";
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -802,9 +854,25 @@ header {
     font-size: toRem(19);
     line-height: 1.5; /* 24/16 */
     transition: 0.3s;
+
+    position: relative;
+    &::before {
+      content: "";
+      height: toRem(2);
+      width: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: 0.3s;
+      background-color: $yellowColor;
+    }
     &:hover {
       transition: 0.3s;
-      transform: scale(1.05);
+      color: $yellowColor;
+      &::before {
+        content: "";
+        width: 100%;
+      }
     }
   }
 }
@@ -877,7 +945,7 @@ header {
 
   &__popap {
     position: absolute;
-    left: toRem(15);
+    left: 20%;
   }
 }
 .header-button-popap {
@@ -1072,5 +1140,3 @@ header {
     transform: rotate(180deg);
   }
 }
-
-//

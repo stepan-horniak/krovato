@@ -39,20 +39,19 @@ function windowLoaded() {
       window.location.href = "tel:+380931234567"
     }
     //=============burger-menu===================
+    const burgerHeader = document.querySelector(".header-main-burger")
+    const menuHeader = document.querySelector(".header-main__menu-burger")
     if (el.closest(".header-main-burger")) {
-      const burger = document.querySelector(".header-main-burger")
-      const menu = document.querySelector(".header-main__menu-burger")
-      burger.classList.toggle("active")
-      menu.classList.toggle("active")
+      burgerHeader.classList.toggle("active")
+      menuHeader.classList.toggle("active")
     }
+
     if (
       !el.closest(".header-main-burger") &&
       !el.closest(".header-main__menu-burger")
     ) {
-      const burger = document.querySelector(".header-main-burger")
-      const menu = document.querySelector(".header-main__menu-burger")
-      burger.classList.remove("active")
-      menu.classList.remove("active")
+      burgerHeader.classList.remove("active")
+      menuHeader.classList.remove("active")
     }
     //================header-search-popap===========================
     if (
@@ -69,23 +68,23 @@ function windowLoaded() {
       const searchEl = document.querySelector(".header-search__container")
       searchEl.classList.remove("active")
     }
-    //==================cheader-atalog-button==================
+    //==================header-catalog-button==================
+    const buttonCatalogHeader = document.querySelector(
+      ".header-main-catalog__button"
+    )
+    const searchElCatalogHeader = document.querySelector(".header-main-catalog")
 
     if (el.closest(".header-main-catalog__button")) {
-      const button = document.querySelector(".header-main-catalog__button")
-      const searchEl = document.querySelector(".header-main-catalog")
-      searchEl.classList.toggle("active")
-      button.classList.toggle("active")
+      buttonCatalogHeader.classList.toggle("active")
+      searchElCatalogHeader.classList.toggle("active")
     }
     if (
       !el.closest(".header-main-catalog__button") &&
       !el.closest(".header-button-popap__list")
     ) {
-      const searchEl = document.querySelector(".header-main-catalog")
-      const button = document.querySelector(".header-main-catalog__button")
-      button.classList.remove("active")
+      buttonCatalogHeader.classList.remove("active")
 
-      searchEl.classList.remove("active")
+      searchElCatalogHeader.classList.remove("active")
     }
     //=================cheader-atalog-button-list===========================
     if (el.closest(".header-button-popap__item")) {
@@ -95,16 +94,13 @@ function windowLoaded() {
       )
       const clickedItem = el.closest(".header-button-popap__item")
 
-      // Знайдемо відповідне підменю для натиснутого елемента
       const subMenu = clickedItem.querySelector(
         ".header-button-popap-insert__list"
       )
 
-      // Закриваємо всі інші меню
       allItems.forEach((item) => item.classList.remove("active"))
       allSubMenus.forEach((sub) => (sub.style.display = "none"))
 
-      // Перемикаємо активність лише на натиснутому пункті
       if (subMenu) {
         const isActive = clickedItem.classList.contains("active")
 
@@ -145,7 +141,15 @@ function windowLoaded() {
       const textElement = document.querySelector(".main__text")
       textElement.classList.toggle("active")
     }
-    //=================================================
+    //===================hidden-body==============================
+    if (
+      (burgerHeader.classList.contains("active") && window.innerWidth <= 500) ||
+      buttonCatalogHeader.classList.contains("active")
+    )
+      document.body.style.overflow = "hidden"
+    else document.body.style.overflow = "auto"
+
+    //=============================================================
   }
   document.addEventListener("click", (e) => documentActions(e))
 
@@ -311,25 +315,6 @@ function windowLoaded() {
       el: ".slider-reviews__swiper-pagination", // Пагінація
       clickable: true, // Дозволяє натискати на точки пагінації
     },
-    // breakpoints: {
-    //   // when window width is >= 320px
-    //   320: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 15,
-    //   },
-    //   460: {
-    //     slidesPerView: 1.2,
-    //     spaceBetween: 30,
-    //   },
-    //   950: {
-    //     slidesPerView: 2.2,
-    //     spaceBetween: 20,
-    //   },
-    //   1050: {
-    //     slidesPerView: "auto",
-    //     spaceBetween: 30,
-    //   },
-    // },
   })
   //================blogs-swiper=========================
   const swiperMainBlogs = new Swiper(".blogs__swiper", {
