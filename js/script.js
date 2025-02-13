@@ -149,11 +149,25 @@ function windowLoaded() {
       document.body.style.overflow = "hidden"
     else document.body.style.overflow = "auto"
 
+    //============================basket=================================
+    if (el.closest(".card-popular-buy__basket")) {
+      addBasket(el.closest(".card-popular-buy__basket"))
+    }
+
+    //=============================================================
     //=============================================================
   }
   document.addEventListener("click", (e) => documentActions(e))
+  //=============================================================
+  function addBasket(elClik) {
+    const basked = document.querySelector(".header-basket__product")
+    const clicCard = elClik.closest(".card-popular")
+    const cardClone = clicCard.cloneNode(true)
 
-  //========================
+    basked.append(cardClone)
+  }
+
+  //==============================================================
   function handleScreenChange(e) {
     const screenWidth = window.innerWidth
 
