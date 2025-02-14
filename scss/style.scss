@@ -4,9 +4,7 @@
 @import "./mixins";
 @import "./colors";
 @import "./fonts";
-@import "./header";
-@import "./footer";
-
+@import "./component";
 //=======================
 body {
   background-color: $lightColor;
@@ -36,4 +34,9 @@ body {
   margin: 0 auto;
 }
 //============================
+
+@import "./header";
+
 @import "./main";
+@import "./catalog";
+@import "./footer";

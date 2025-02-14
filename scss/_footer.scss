@@ -9,12 +9,12 @@
   // .footer__container
 
   &__container {
-    padding: toRem(40) 0;
+    padding: toRem(40) toRem(15);
     @media (max-width: toEm(1100)) {
-      padding: toRem(15) 0;
+      padding: toRem(15) toRem(15);
     }
     @media (max-width: toEm(991.98)) {
-      padding: toRem(40) 0;
+      padding: toRem(40) toRem(15);
     }
   }
 

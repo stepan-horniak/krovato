@@ -1,0 +1,22 @@
+.button {
+  color: $white;
+  background-color: $yellowColor;
+  font-size: toRem(19);
+  line-height: 1.26; /* 24/19 */
+  font-weight: 600;
+  border-radius: toRem(8);
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: $hoverButton;
+  }
+}
+.title {
+  font-weight: 600;
+  font-size: toRem(40);
+  line-height: 1.2; /* 48/40 */
+  @media (max-width: toEm(767.98)) {
+    font-size: toRem(30);
+  }
+}

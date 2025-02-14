@@ -283,13 +283,14 @@ function windowLoaded() {
     const parrentBottomContainer = document.querySelector(".header-bottom")
 
     const burgerMenu = document.querySelector(".header-main__menu-burger")
-
-    if (screenWidth <= 991.98) {
-      burgerMenu.append(bottomContainer)
-      burgerMenu.append(topContainer)
-    } else {
-      parrentTopContainer.append(topContainer)
-      parrentBottomContainer.append(bottomContainer)
+    if (burgerMenu) {
+      if (screenWidth <= 991.98) {
+        burgerMenu.append(bottomContainer)
+        burgerMenu.append(topContainer)
+      } else {
+        parrentTopContainer.append(topContainer)
+        parrentBottomContainer.append(bottomContainer)
+      }
     }
 
     //===============header-dinamic-change-el============
@@ -301,16 +302,17 @@ function windowLoaded() {
     const headerElSearch = document.querySelector(".header-main__search")
     const headerElFavorite = document.querySelector(".header-main__favorite")
     const headerElTel = document.querySelector(".header-main__tell")
-
-    if (screenWidth <= 767.98) {
-      parrentEl.append(headerElButton)
-      parrentEl.append(headerElSearch)
-      parrentEl.append(headerElFavorite)
-    } else {
-      mainContainer.append(headerElButton)
-      mainContainer.append(headerElSearch)
-      mainContainer.append(headerElTel)
-      mainContainer.append(headerElFavorite)
+    if (parrentEl) {
+      if (screenWidth <= 767.98) {
+        parrentEl.append(headerElButton)
+        parrentEl.append(headerElSearch)
+        parrentEl.append(headerElFavorite)
+      } else {
+        mainContainer.append(headerElButton)
+        mainContainer.append(headerElSearch)
+        mainContainer.append(headerElTel)
+        mainContainer.append(headerElFavorite)
+      }
     }
 
     //===============header-close-search-header===============
@@ -327,32 +329,36 @@ function windowLoaded() {
     const footerParrentLogo = document.querySelector(".footer-socials__row")
 
     //==================
+    if (footerInfoContainer) {
+      if (screenWidth < 991.98) {
+        footerInfoContainer.prepend(footerLogo)
+        footerInfoContainer.append(footerAdressContainer)
+        footerInfoContainer.append(footerSocialsContainer)
+      } else {
+        footerParrentLogo.prepend(footerLogo)
+        footerMainContainer.prepend(footerSocialsContainer)
+        footerInfoContainer.append(footerAdressContainer)
+      }
 
-    if (screenWidth < 991.98) {
-      footerInfoContainer.prepend(footerLogo)
-      footerInfoContainer.append(footerAdressContainer)
-      footerInfoContainer.append(footerSocialsContainer)
-    } else {
-      footerParrentLogo.prepend(footerLogo)
-      footerMainContainer.prepend(footerSocialsContainer)
-      footerInfoContainer.append(footerAdressContainer)
-    }
-
-    if (screenWidth >= 991.98 && screenWidth < 1100) {
-      footerInfoContainer.append(footerAdressContainer)
-    } else if (screenWidth >= 1100) {
-      footerMainContainer.append(footerAdressContainer)
+      if (screenWidth >= 991.98 && screenWidth < 1100) {
+        footerInfoContainer.append(footerAdressContainer)
+      } else if (screenWidth >= 1100) {
+        footerMainContainer.append(footerAdressContainer)
+      }
     }
     //==================change-img-top-slider=============================
-    if (screenWidth < 767.98) {
-      document.querySelectorAll(".top__swiper-slide img").forEach((img) => {
-        img.src = "./images/top-slider767.png" // Для мобільних
-      })
-    }
-    if (screenWidth > 767.98) {
-      document.querySelectorAll(".top__swiper-slide img").forEach((img) => {
-        img.src = "./images/top-slider.png" // Для десктопа
-      })
+    const topSection = document.querySelector(".top")
+    if (topSection) {
+      if (screenWidth < 767.98) {
+        document.querySelectorAll(".top__swiper-slide img").forEach((img) => {
+          img.src = "./images/top-slider767.png" // Для мобільних
+        })
+      }
+      if (screenWidth > 767.98) {
+        document.querySelectorAll(".top__swiper-slide img").forEach((img) => {
+          img.src = "./images/top-slider.png" // Для десктопа
+        })
+      }
     }
     //====================blogs===========================
     const blogsParrent = document.querySelectorAll(".blogs__swiper-slide")
@@ -360,15 +366,16 @@ function windowLoaded() {
     const blogsContainer = document.querySelector(".blogs__after-swiper")
     const blogsButton = document.querySelector(".blogs-title__text")
     const blogsButtonParrent = document.querySelector(".blogs-control__title")
-
-    if (screenWidth < 550) {
-      blogsItems.forEach((el) => blogsContainer.append(el))
-      blogsContainer.append(blogsButton)
-    } else {
-      blogsParrent.forEach((el, index) => el.append(blogsItems[index]))
-      blogsButtonParrent.append(blogsButton)
+    if (blogsContainer) {
+      if (screenWidth < 550) {
+        blogsItems.forEach((el) => blogsContainer.append(el))
+        blogsContainer.append(blogsButton)
+      } else {
+        blogsParrent.forEach((el, index) => el.append(blogsItems[index]))
+        blogsButtonParrent.append(blogsButton)
+      }
     }
-    //===============================================
+    //======================beds-open=========================
   }
   handleScreenChange()
   window.addEventListener("resize", handleScreenChange)
