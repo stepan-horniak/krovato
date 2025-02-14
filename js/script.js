@@ -141,32 +141,137 @@ function windowLoaded() {
       const textElement = document.querySelector(".main__text")
       textElement.classList.toggle("active")
     }
+
+    //============================basket=================================
+    if (el.closest(".card-popular-buy__basket")) {
+      addProductBasket(el.closest(".card-popular-buy__basket"))
+      countBasket()
+      totalSumBasket()
+    }
+    //============================remove-el-basket====================
+    if (el.closest(".cross-basket-header")) {
+      removeProduct(el.closest(".cross-basket-header"))
+      countBasket()
+      totalSumBasket()
+    }
+    //=====================countElementBasket=================
+    if (el.closest(".count-basket-header")) {
+      countElementBasket(el)
+      totalSumBasket()
+    }
+    //==========================basket-open===================================
+    const headerBasketBlock = document.querySelector(".header-basket")
+    if (
+      el.closest(".header-main-favorite__basket") ||
+      el.closest(".top-header-basket__cross")
+    ) {
+      headerBasketBlock.classList.toggle("active")
+    }
     //===================hidden-body==============================
     if (
       (burgerHeader.classList.contains("active") && window.innerWidth <= 500) ||
-      buttonCatalogHeader.classList.contains("active")
+      buttonCatalogHeader.classList.contains("active") ||
+      headerBasketBlock.classList.contains("active")
     )
       document.body.style.overflow = "hidden"
     else document.body.style.overflow = "auto"
 
-    //============================basket=================================
-    if (el.closest(".card-popular-buy__basket")) {
-      addBasket(el.closest(".card-popular-buy__basket"))
-    }
-
-    //=============================================================
     //=============================================================
   }
   document.addEventListener("click", (e) => documentActions(e))
-  //=============================================================
-  function addBasket(elClik) {
-    const basked = document.querySelector(".header-basket__product")
+  //======================basket-add=======================================
+  function addProductBasket(elClik) {
+    const baskedContainer = document.querySelector(".header-basket__product")
     const clicCard = elClik.closest(".card-popular")
-    const cardClone = clicCard.cloneNode(true)
 
-    basked.append(cardClone)
+    const titleProduct = clicCard.querySelector(".card-popular__title")
+    const allElements = baskedContainer.querySelectorAll(".card-popular")
+
+    let hasElBasked = false
+    let countBaskedEl = null
+
+    allElements.forEach((el) => {
+      const baskedElTitle = el.querySelector(".card-popular__title")
+      if (titleProduct.textContent === baskedElTitle.textContent)
+        hasElBasked = true
+      countBaskedEl = el.querySelector(".count-basket-header__number")
+    })
+
+    if (hasElBasked) {
+      let count = parseFloat(countBaskedEl.textContent)
+      count += 1
+      return (countBaskedEl.textContent = count)
+    } else {
+      const cardClone = clicCard.cloneNode(true)
+      const createCount = `
+      <div class="count-basket-header">
+        <div class="count-basket-header__minus">-</div>
+        <div class="count-basket-header__number">1</div>
+        <div class="count-basket-header__plus">+</div>
+      </div>
+    `
+      const createCross = `
+      <div class="cross-basket-header _icon-cross"></div>
+    `
+      cardClone.insertAdjacentHTML("beforeend", createCount)
+      cardClone.insertAdjacentHTML("beforeend", createCross)
+
+      baskedContainer.append(cardClone)
+    }
   }
+  //===============count-basket====================
+  function countBasket() {
+    const countElement = document.querySelector(".top-header-basket__number")
 
+    const basketWrapper = document.querySelector(".header-basket__wrapper")
+    const elementsBasket = basketWrapper.querySelectorAll(".card-popular")
+    const count = elementsBasket.length
+    countElement.textContent = count
+  }
+  //================remove-basket==================
+  function removeProduct(elClick) {
+    const cardEl = elClick.closest(".card-popular")
+    cardEl.remove()
+  }
+  //===============count-basket=================================
+  function countElementBasket(el) {
+    let clicCard = el.closest(".card-popular")
+
+    let currentCountElement = clicCard.querySelector(
+      ".count-basket-header__number"
+    )
+    let count = parseFloat(currentCountElement.textContent)
+
+    if (el.closest(".count-basket-header__minus") && count > 1) {
+      count -= 1
+    }
+
+    if (el.closest(".count-basket-header__plus")) {
+      count += 1
+    }
+
+    return (currentCountElement.textContent = count)
+  }
+  //====================total-sum-basket=======================================
+  function totalSumBasket() {
+    const containerBasket = document.querySelector(".header-basket__product")
+    const products = containerBasket.querySelectorAll(".card-popular")
+
+    let sum = 0
+    products.forEach((el) => {
+      const card = el.querySelector(".card-price__price")
+      const countElements = el.querySelector(".count-basket-header__number")
+
+      sum +=
+        parseFloat(card.textContent.replaceAll(/\s/g, "")) *
+        parseFloat(countElements.textContent)
+    })
+    const containerSum = document.querySelector(
+      ".buttons-header-basket__total-sum"
+    )
+
+    containerSum.textContent = `${sum} грн`
+  }
   //==============================================================
   function handleScreenChange(e) {
     const screenWidth = window.innerWidth
