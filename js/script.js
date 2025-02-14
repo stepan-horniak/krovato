@@ -3,7 +3,7 @@
 window.addEventListener("load", windowLoaded)
 
 function windowLoaded() {
-  //===========================
+  //=======================================================================
   function documentActions(e) {
     const el = e.target
     // ========header-language============
@@ -179,7 +179,7 @@ function windowLoaded() {
     //=============================================================
   }
   document.addEventListener("click", (e) => documentActions(e))
-  //======================basket-add=======================================
+  //======================basket-add=============
   function addProductBasket(elClik) {
     const baskedContainer = document.querySelector(".header-basket__product")
     const clicCard = elClik.closest(".card-popular")
@@ -219,7 +219,7 @@ function windowLoaded() {
       baskedContainer.append(cardClone)
     }
   }
-  //===============count-basket====================
+  //===============count-basket==================
   function countBasket() {
     const countElement = document.querySelector(".top-header-basket__number")
 
@@ -228,12 +228,12 @@ function windowLoaded() {
     const count = elementsBasket.length
     countElement.textContent = count
   }
-  //================remove-basket==================
+  //================remove-basket================
   function removeProduct(elClick) {
     const cardEl = elClick.closest(".card-popular")
     cardEl.remove()
   }
-  //===============count-basket=================================
+  //===============count-basket==================
   function countElementBasket(el) {
     let clicCard = el.closest(".card-popular")
 
@@ -252,7 +252,7 @@ function windowLoaded() {
 
     return (currentCountElement.textContent = count)
   }
-  //====================total-sum-basket=======================================
+  //====================total-sum-basket=========
   function totalSumBasket() {
     const containerBasket = document.querySelector(".header-basket__product")
     const products = containerBasket.querySelectorAll(".card-popular")
@@ -272,7 +272,7 @@ function windowLoaded() {
 
     containerSum.textContent = `${sum} грн`
   }
-  //==============================================================
+  //========================================================================
   function handleScreenChange(e) {
     const screenWidth = window.innerWidth
 
@@ -372,7 +372,7 @@ function windowLoaded() {
   }
   handleScreenChange()
   window.addEventListener("resize", handleScreenChange)
-  //========slider-top=============
+  //========slider-top===========================
   const swiperMainTop = new Swiper(".top__swiper", {
     loop: true, // Безкінечний слайдер
     slidesPerView: 1, // Один слайд на екрані
@@ -386,7 +386,7 @@ function windowLoaded() {
       prevEl: ".top__swiper-button-prev", // Кнопка для повернення до попереднього слайду
     },
   })
-  //========slider-Shares=============
+  //========slider-Shares========================
 
   const swiperMainShares = new Swiper(".shares__swiper", {
     loop: true, // Безкінечний слайдер
@@ -418,7 +418,7 @@ function windowLoaded() {
       },
     },
   })
-  //================reviews-swiper=========================
+  //================reviews-swiper===============
   const swiperReviews = new Swiper(".slider-reviews__swiper", {
     slidesPerView: "auto",
     spaceBetween: 30,
@@ -435,7 +435,7 @@ function windowLoaded() {
       clickable: true, // Дозволяє натискати на точки пагінації
     },
   })
-  //================blogs-swiper=========================
+  //================blogs-swiper=================
   const swiperMainBlogs = new Swiper(".blogs__swiper", {
     loop: true, // Безкінечний слайдер
     slidesPerView: 3, // Три слайди на екрані
@@ -462,5 +462,5 @@ function windowLoaded() {
       },
     },
   })
-  //=============================
+  //=============================================
 }

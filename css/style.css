@@ -3262,7 +3262,7 @@ body {
 .slider-reviews__swiper-pagination {
   display: none;
 }
-@media (max-width: 47.99875em) {
+@media (max-width: 61.99875em) {
   .slider-reviews__swiper-pagination {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3295,7 +3295,7 @@ body {
   background-color: #e3e2e2;
   position: relative;
 }
-@media (max-width: 47.99875em) {
+@media (max-width: 61.99875em) {
   .reviews-slider-scroll {
     display: none;
   }

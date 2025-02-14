@@ -965,7 +965,7 @@
 
   &__swiper-pagination {
     display: none;
-    @media (max-width: toEm(767.98)) {
+    @media (max-width: toEm(991.98)) {
       display: flex;
       gap: 10px;
       position: absolute;
@@ -1002,7 +1002,7 @@
   height: toRem(6);
   background-color: #e3e2e2;
   position: relative;
-  @media (max-width: toEm(767.98)) {
+  @media (max-width: toEm(991.98)) {
     display: none;
   }
 }
