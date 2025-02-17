@@ -671,7 +671,9 @@
 
             <div class="header-main__favorite header-main-favorite">
               <div class="header-main-favorite__like _icon-likes"></div>
-              <div class="header-main-favorite__basket _icon-basket   "></div>
+              <div class="header-main-favorite__basket _icon-basket   ">
+                <div class="header-main-favorite__count-element">0</div>
+              </div>
             </div>
           </div>
         </div>
@@ -823,7 +825,572 @@
               <div class="card-beds__image"><img src="./images/beds/img-9.png" alt="image"></div>
             </div>
           </div>
-          <div class="beds__hidden _icon-two-arrow">Приховати підкатегорії</div>
+          <div class="beds__hidden _icon-two-arrow">Показати підкатегорії</div>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="catalog__container">
+          <div class="catalog__grid">
+            <aside class="catalog__aside aside-filter-catalog">
+              <div class="aside-filter-catalog__title title-aside-filter-catalog">
+                <div class="title-aside-filter-catalog__icons">
+                  <div class="title-aside-filter-catalog__icon"></div>
+                  <div class="title-aside-filter-catalog__icon"></div>
+                  <div class="title-aside-filter-catalog__icon"></div>
+                </div>
+                <div class="title-aside-filter-catalog__text">Фільтр пошуку</div>
+              </div>
+
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog active">
+                  <div class="head-block-catalog__text">Ціна, грн</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__price price-sub-menu">
+                    <input class="price-sub-menu__price-from" value="1195" type="number">
+                    <input class="price-sub-menu__price-to" value="9566" type="number">
+                    <button class="price-sub-menu__button button">ОК</button>
+                  </div>
+                  <div class="sub-menu-block-catalog__range range-sub-menu  ">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog">
+                  <div class="head-block-catalog__text">Наявність</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">В наявності</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Під замовлення</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog">
+                  <div class="head-block-catalog__text">Виробник</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Corners</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Estella</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Green Line</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Legko</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">MiroMark</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Novelty</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Soft-line</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Venger</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Арбор Древ</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Городок мебель</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Soft-line</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Venger</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Арбор Древ</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Городок мебель</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog">
+                  <div class="head-block-catalog__text">Тип ліжка</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Без узголов'я</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">З узголів'ям </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Двоярусні </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Розкладачки</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Шафи</span>
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog">
+                  <div class="head-block-catalog__text">Розмір спального місця</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">200x210 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">200x200 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">180x200 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">160x200 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">110x190 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">160x190 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">150x200 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">140x200 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">140x190 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">120x200 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">150x200 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">140x200 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">140x190 см</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">120x200 см</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog">
+                  <div class="head-block-catalog__text">Ширина спального місця</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Без узголов'я</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">З узголів'ям </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Двоярусні </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Розкладачки</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Шафи</span>
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog">
+                  <div class="head-block-catalog__text">Довжина спального місця</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Без узголов'я</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">З узголів'ям </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Двоярусні </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Розкладачки</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Шафи</span>
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog">
+                  <div class="head-block-catalog__text">Форма</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Без узголов'я</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">З узголів'ям </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Двоярусні </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Розкладачки</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Шафи</span>
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog">
+                  <div class="head-block-catalog__text">Матеріал корпусу</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Без узголов'я</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">З узголів'ям </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Двоярусні </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Розкладачки</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Шафи</span>
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+              <div class="aside-filter-catalog__block block-aside-filter-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog">
+                  <div class="head-block-catalog__text">Основа для матраца</div>
+                  <div class="head-block-catalog__icons">
+                    <span class="head-block-catalog__icon _icon-cross"></span>
+                    <span class="head-block-catalog__icon _icon-arrow-down"></span>
+                  </div>
+                </div>
+                <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
+                  <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Без узголов'я</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">З узголів'ям </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Двоярусні </span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Розкладачки</span>
+                    </label>
+                    <label class="checkbox-sub-menu__label">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <span class="checkbox-sub-menu__span">Шафи</span>
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <div class=" catalog__filter filter-catalog">
+              <div class="filter-catalog__top top-filter-catalog">
+                <div class="top-filter-catalog__selection-text">Ви вибрали:</div>
+                <div class="top-filter-catalog__sort-text _icon-firter">Сортування:</div>
+                <select class="top-filter-catalog__sort-popap _icon-arrow-down">
+                  <option value="">За зростанням ціни</option>
+                  <option value="">За спаданням ціни</option>
+
+                </select>
+
+              </div>
+              <div class="filter-catalog__cancel cancel-filter-catalog">
+                <div class="cancel-filter-catalog__row">
+                  <button
+                    class="cancel-filter-catalog__button cancel-filter-catalog__button--Yelow _icon-cross">Очистити</button>
+
+                </div>
+              </div>
+            </div>
+            <div class="catalog__content">
+              <div class="popular__grid">
+                <div class="popular__card card-popular">
+                  <a href="#" class="card-popular__image"><img src="./images/popular/img-0.png" alt="product"></a>
+                  <div class="card-popular__parameters">Розмір: 61 x 184 x 2130 мм
+                  </div>
+                  <div class="card-popular__title">Ліжко Спарта / Sparta з підйомним механізмом</div>
+                  <div class="card-popular__in-stoсk _icon-in-stock">В наявності</div>
+                  <div class="card-popular__buy card-popular-buy">
+                    <div class="card-popular-buy__price card-price">
+                      <div class="card-price__sale">25 400 грн.</div>
+                      <div class="card-price__price">15 400 грн.</div>
+                    </div>
+                    <div class="card-popular-buy__likes _icon-likes"></div>
+                    <div class="card-popular-buy__basket _icon-basket"></div>
+
+                  </div>
+                </div>
+                <div class="popular__card card-popular">
+                  <a href="#" class="card-popular__image"><img src="./images/popular/img-1.png" alt="product"></a>
+                  <div class="card-popular__parameters">Розмір: 61 x 184 x 2130 мм
+
+                  </div>
+                  <div class="card-popular__title">Ліжко Аргон з підйомним механізмом
+                  </div>
+                  <div class="card-popular__in-stoсk _icon-in-stock">В наявності</div>
+                  <div class="card-popular__buy card-popular-buy">
+                    <div class="card-popular-buy__price card-price">
+                      <div class="card-price__sale"></div>
+                      <div class="card-price__price">16 400 грн.</div>
+                    </div>
+                    <div class="card-popular-buy__likes _icon-likes"></div>
+                    <div class="card-popular-buy__basket _icon-basket"></div>
+
+                  </div>
+                </div>
+                <div class="popular__card card-popular">
+                  <a href="#" class="card-popular__image"><img src="./images/popular/img-2.png" alt="product"></a>
+                  <div class="card-popular__parameters">Розмір: 61 x 184 x 2130 мм
+
+                  </div>
+                  <div class="card-popular__title">Ліжко Престиж з підйомним механізмом</div>
+                  <div class="card-popular__in-stoсk _icon-in-stock">В наявності</div>
+                  <div class="card-popular__buy card-popular-buy">
+                    <div class="card-popular-buy__price card-price">
+                      <div class="card-price__sale"></div>
+                      <div class="card-price__price">
+                        14 969 грн.</div>
+                    </div>
+                    <div class="card-popular-buy__likes _icon-likes"></div>
+                    <div class="card-popular-buy__basket _icon-basket"></div>
+
+                  </div>
+                </div>
+                <div class="popular__card card-popular">
+                  <a href="#" class="card-popular__image"><img src="./images/popular/img-3.png" alt="product"></a>
+                  <div class="card-popular__parameters">Розмір: 61 x 184 x 2130 мм
+                  </div>
+                  <div class="card-popular__title">Диван Токіо-2</div>
+                  <div class="card-popular__in-stoсk _icon-in-stock">В наявності</div>
+                  <div class="card-popular__buy card-popular-buy">
+                    <div class="card-popular-buy__price card-price">
+                      <div class="card-price__sale"></div>
+                      <div class="card-price__price">13 211 грн.</div>
+                    </div>
+                    <div class="card-popular-buy__likes _icon-likes"></div>
+                    <div class="card-popular-buy__basket _icon-basket"></div>
+
+                  </div>
+                </div>
+                <div class="popular__card card-popular">
+                  <a href="#" class="card-popular__image"><img src="./images/popular/img-4.png" alt="product"></a>
+                  <div class="card-popular__parameters">Розмір: 61 x 184 x 2130 мм
+                  </div>
+                  <div class="card-popular__title">Матрац Largo SLIM / Ларго Слім</div>
+                  <div class="card-popular__in-stoсk _icon-in-stock">В наявності</div>
+                  <div class="card-popular__buy card-popular-buy">
+                    <div class="card-popular-buy__price card-price">
+                      <div class="card-price__sale">3 122 грн.</div>
+                      <div class="card-price__price">2 810 грн.</div>
+                    </div>
+                    <div class="card-popular-buy__likes _icon-likes"></div>
+                    <div class="card-popular-buy__basket _icon-basket"></div>
+
+                  </div>
+                </div>
+                <div class="popular__card card-popular">
+                  <a href="#" class="card-popular__image"><img src="./images/popular/img-5.png" alt="product"></a>
+                  <div class="card-popular__parameters">Розмір: 61 x 184 x 2130 мм
+                  </div>
+                  <div class="card-popular__title">Матрац ARGENTUM AMALTEA / Аргентум Амалті</div>
+                  <div class="card-popular__in-stoсk _icon-in-stock">В наявності</div>
+                  <div class="card-popular__buy card-popular-buy">
+                    <div class="card-popular-buy__price card-price">
+                      <div class="card-price__sale">5 966 грн.</div>
+                      <div class="card-price__price">5 071 грн.</div>
+                    </div>
+                    <div class="card-popular-buy__likes _icon-likes"></div>
+                    <div class="card-popular-buy__basket _icon-basket"></div>
+
+                  </div>
+                </div>
+                <div class="popular__card card-popular">
+                  <a href="#" class="card-popular__image"><img src="./images/popular/img-6.png" alt="product"></a>
+                  <div class="card-popular__parameters">Розмір: 61 x 184 x 2130 мм
+                  </div>
+                  <div class="card-popular__title">Диван Браво</div>
+                  <div class="card-popular__in-stoсk _icon-in-stock">В наявності</div>
+                  <div class="card-popular__buy card-popular-buy">
+                    <div class="card-popular-buy__price card-price">
+                      <div class="card-price__sale"></div>
+                      <div class="card-price__price">
+                        10 008 грн.</div>
+                    </div>
+                    <div class="card-popular-buy__likes _icon-likes"></div>
+                    <div class="card-popular-buy__basket _icon-basket"></div>
+
+                  </div>
+                </div>
+                <div class="popular__card card-popular">
+                  <a href="#" class="card-popular__image"><img src="./images/popular/img-7.png" alt="product"></a>
+                  <div class="card-popular__parameters">Розмір: 61 x 184 x 2130 мм
+                  </div>
+                  <div class="card-popular__title">Ліжко МК-5</div>
+                  <div class="card-popular__in-stoсk _icon-in-stock">В наявності</div>
+                  <div class="card-popular__buy card-popular-buy">
+                    <div class="card-popular-buy__price card-price">
+                      <div class="card-price__sale"></div>
+                      <div class="card-price__price">
+                        8 775 грн.</div>
+                    </div>
+                    <div class="card-popular-buy__likes _icon-likes"></div>
+                    <div class="card-popular-buy__basket _icon-basket"></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <article class="popular">
@@ -1362,11 +1929,11 @@
 
         <!-- ============================================================== -->
       </article>
-      <section class="main">
-        <div class="main__container">
-          <h1 class="main__title title">KROVATO - коли потрібні якісні меблі за доступною ціною!</h1>
-          <div class="main__wrapper-text">
-            <p class="main__text">Якщо в пошуковий рядок браузера ввести запит: «Куплю ліжко, шафу, диван»,
+      <section class="seo">
+        <div class="seo__container">
+          <h1 class="seo__title title">KROVATO - коли потрібні якісні меблі за доступною ціною!</h1>
+          <div class="seo__wrapper-text">
+            <p class="seo__text">Якщо в пошуковий рядок браузера ввести запит: «Куплю ліжко, шафу, диван»,
               система
               видасть сотні продавців, що спеціалізуються з продажу цього товару. Але далеко не всі магазини та сайти в
               інтернеті можуть запропонувати такий самий різноманітний асортимент, як наша компанія. Та й з нашими
@@ -1400,7 +1967,7 @@
               цінами конкурувати можуть мало хто. Адже товар ми отримуємо безпосередньо від виробників, не переплачуючи
               за
               послуги посередників. До того ж...</p>
-            <button class="main__button _icon-Vector-3"></button>
+            <button class="seo__button _icon-Vector-3"></button>
           </div>
         </div>
       </section>

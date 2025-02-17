@@ -708,6 +708,28 @@ header {
       }
     }
   }
+  // .header-main-favorite__count-element
+
+  &__count-element {
+    position: absolute;
+    top: toRem(-5);
+    left: toRem(-10);
+    width: toRem(25);
+    height: toRem(25);
+    font-size: toRem(20);
+    font-weight: 600;
+    background-color: white;
+    border-radius: 50%;
+    border: toRem(2) solid $yellowColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $colorRed;
+    display: none;
+    &.active {
+      display: flex;
+    }
+  }
 }
 
 //===============================================================

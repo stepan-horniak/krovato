@@ -128,7 +128,13 @@ function windowLoaded() {
         ".wrapper-info-footer__title"
       )
 
-      if (currentChildrenItem && currentChildrenArrow) {
+      if (
+        currentChildrenItem.classList.contains("active") &&
+        currentChildrenArrow.classList.contains("active")
+      ) {
+        currentChildrenItem.classList.remove("active")
+        currentChildrenArrow.classList.remove("active")
+      } else if (currentChildrenItem && currentChildrenArrow) {
         allElementsArrow.forEach((el) => el.classList.remove("active"))
         allElements.forEach((el) => el.classList.remove("active"))
         currentChildrenItem.classList.add("active")
@@ -136,9 +142,9 @@ function windowLoaded() {
       }
     }
 
-    //==========================main-button=======================
-    if (el.closest(".main__button")) {
-      const textElement = document.querySelector(".main__text")
+    //==========================seo-button=======================
+    if (el.closest(".seo__button")) {
+      const textElement = document.querySelector(".seo__text")
       textElement.classList.toggle("active")
     }
 
@@ -159,6 +165,20 @@ function windowLoaded() {
       countElementBasket(el)
       totalSumBasket()
     }
+    //=====================countElementBasket=================
+    const baskedContainer = document.querySelector(
+      ".header-basket__product"
+    ).children
+    const baskedIconNumber = document.querySelector(
+      ".header-main-favorite__count-element"
+    )
+    if (baskedContainer.length) {
+      baskedIconNumber.classList.add("active")
+      baskedIconNumber.textContent = countBasket()
+    } else {
+      baskedIconNumber.classList.remove("active")
+    }
+
     //==========================basket-open===================================
     const headerBasketBlock = document.querySelector(".header-basket")
     if (
@@ -166,6 +186,27 @@ function windowLoaded() {
       el.closest(".top-header-basket__cross")
     ) {
       headerBasketBlock.classList.toggle("active")
+    }
+    //==========================beds-open===================================
+    if (el.closest(".beds__hidden")) {
+      const bedsButton = document.querySelector(".beds__hidden")
+      const bedsContainer = document.querySelector(".beds__grid")
+      bedsContainer.classList.toggle("active")
+      bedsButton.classList.toggle("active")
+      if (bedsButton.classList.contains("active")) {
+        bedsButton.textContent = "Приховати підкатегорії"
+      } else bedsButton.textContent = "Показати підкатегорії"
+    }
+    //========================aside-opensub-menu====================
+    if (el.closest(".head-block-catalog")) {
+      const currentElement = el.closest(".block-aside-filter-catalog")
+
+      const filterHead = currentElement.querySelector(".head-block-catalog")
+      const iconHead = currentElement.querySelector(
+        ".head-block-catalog__icons"
+      )
+      filterHead.classList.toggle("active")
+      iconHead.classList.toggle("active")
     }
     //===================hidden-body==============================
     if (
@@ -227,6 +268,7 @@ function windowLoaded() {
     const elementsBasket = basketWrapper.querySelectorAll(".card-popular")
     const count = elementsBasket.length
     countElement.textContent = count
+    return count
   }
   //================remove-basket================
   function removeProduct(elClick) {
@@ -375,7 +417,30 @@ function windowLoaded() {
         blogsButtonParrent.append(blogsButton)
       }
     }
-    //======================beds-open=========================
+    //=====================filter=========================
+
+    const catalogText = document.querySelector(".top-filter-catalog__sort-text")
+    const catalogSelect = document.querySelector(
+      ".top-filter-catalog__sort-popap"
+    )
+    const catalogFiltersContainer = document.querySelector(
+      ".cancel-filter-catalog"
+    )
+    const catalogElementsFilter = document.querySelector(
+      ".cancel-filter-catalog__row"
+    )
+    const catalogContainerСhoice = document.querySelector(".top-filter-catalog")
+
+    if (catalogFiltersContainer && catalogContainerСhoice) {
+      if (screenWidth <= 991.98) {
+        catalogFiltersContainer.append(catalogText, catalogSelect)
+        catalogContainerСhoice.append(catalogElementsFilter)
+      } else {
+        catalogContainerСhoice.append(catalogText, catalogSelect)
+        catalogFiltersContainer.append(catalogElementsFilter)
+      }
+    }
+    //===============================================
   }
   handleScreenChange()
   window.addEventListener("resize", handleScreenChange)
@@ -470,4 +535,5 @@ function windowLoaded() {
     },
   })
   //=============================================
+  //========================aside-range====================
 }

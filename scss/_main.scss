@@ -1367,31 +1367,31 @@
 }
 //========================main=================
 
-.main {
-  // .main__container
+.seo {
+  // .seo__container
   &__container {
     padding-bottom: toRem(120);
     max-width: toRem(1100);
   }
-  // .main__title
+  // .seo__title
 
   &__title {
     margin-bottom: toRem(30);
   }
 
-  // .main__wrapper-text
+  // .seo__wrapper-text
 
   &__wrapper-text {
     position: relative;
   }
 
-  // .main__text
+  // .seo__text
 
   &__text {
     line-height: 1.87; /* 30/16 */
-    height: toRem(267);
+    max-height: toRem(267);
     overflow-y: hidden;
-    transition: all 0.2s;
+    transition: all 0.8s;
 
     &::before {
       content: "";
@@ -1409,14 +1409,14 @@
     }
 
     &.active {
-      height: 100%;
-      transition: all 0.2s;
+      max-height: toRem(1500);
+      transition: all 0.8s;
 
       &::after,
       &::before {
         display: none;
       }
-      & ~ .main__button {
+      & ~ .seo__button {
         transform: rotate(180deg);
         &:hover {
           transform: rotate(180deg);
@@ -1426,7 +1426,7 @@
     }
   }
 
-  // .main__button
+  // .seo__button
 
   &__button {
     font-size: toRem(50);
@@ -1435,7 +1435,7 @@
     bottom: toRem(-45);
     left: 50%;
     transform: translateX(-50%);
-    transition: all 0.6s;
+    transition: all 0.3s;
     border-radius: 50%;
     &:hover {
       color: $hoverButton;
