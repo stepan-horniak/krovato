@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./css/style-icons.css">
+  <link rel="stylesheet" href="./nouislider/nouislider.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-icons.css">
   <script src="./js/script.js"></script>
 
   <title>Krovato</title>
@@ -844,7 +845,7 @@
               <div class="aside-filter-catalog__block block-aside-filter-catalog">
                 <div class="block-aside-filter-catalog__head head-block-catalog active">
                   <div class="head-block-catalog__text">Ціна, грн</div>
-                  <div class="head-block-catalog__icons">
+                  <div class="head-block-catalog__icons active">
                     <span class="head-block-catalog__icon _icon-cross"></span>
                     <span class="head-block-catalog__icon _icon-arrow-down"></span>
                   </div>
@@ -852,20 +853,20 @@
                 </div>
                 <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
                   <div class="sub-menu-block-catalog__price price-sub-menu">
-                    <input class="price-sub-menu__price-from" value="1195" type="number">
-                    <input class="price-sub-menu__price-to" value="9566" type="number">
+                    <input id="price-from" class="price-sub-menu__price-from" value="1195" type="number">
+                    <input id="price-to" class="price-sub-menu__price-to" value="9566" type="number">
                     <button class="price-sub-menu__button button">ОК</button>
                   </div>
-                  <div class="sub-menu-block-catalog__range range-sub-menu  ">
-
+                  <div class="sub-menu-block-catalog__range range-sub-menu">
+                    <div id="uiRangeSlider"></div>
                   </div>
                 </div>
               </div>
 
               <div class="aside-filter-catalog__block block-aside-filter-catalog">
-                <div class="block-aside-filter-catalog__head head-block-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog active">
                   <div class="head-block-catalog__text">Наявність</div>
-                  <div class="head-block-catalog__icons">
+                  <div class="head-block-catalog__icons active">
                     <span class="head-block-catalog__icon _icon-cross"></span>
                     <span class="head-block-catalog__icon _icon-arrow-down"></span>
                   </div>
@@ -873,7 +874,7 @@
                 <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
                   <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
                     <label class="checkbox-sub-menu__label">
-                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <input type="checkbox" checked class="checkbox-sub-menu__input">
                       <span class="checkbox-sub-menu__span">В наявності</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
@@ -885,9 +886,9 @@
               </div>
 
               <div class="aside-filter-catalog__block block-aside-filter-catalog">
-                <div class="block-aside-filter-catalog__head head-block-catalog">
+                <div class="block-aside-filter-catalog__head head-block-catalog active">
                   <div class="head-block-catalog__text">Виробник</div>
-                  <div class="head-block-catalog__icons">
+                  <div class="head-block-catalog__icons active">
                     <span class="head-block-catalog__icon _icon-cross"></span>
                     <span class="head-block-catalog__icon _icon-arrow-down"></span>
                   </div>
@@ -895,7 +896,7 @@
                 <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
                   <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
                     <label class="checkbox-sub-menu__label">
-                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <input type="checkbox" checked class="checkbox-sub-menu__input">
                       <span class="checkbox-sub-menu__span">Corners</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
@@ -903,7 +904,7 @@
                       <span class="checkbox-sub-menu__span">Estella</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
-                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <input type="checkbox" checked class="checkbox-sub-menu__input">
                       <span class="checkbox-sub-menu__span">Green Line</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
@@ -915,7 +916,7 @@
                       <span class="checkbox-sub-menu__span">MiroMark</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
-                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <input type="checkbox" checked class="checkbox-sub-menu__input">
                       <span class="checkbox-sub-menu__span">Novelty</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
@@ -2157,7 +2158,7 @@
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+  <script src="./nouislider/nouislider.min.js"></script>
 </body>
 
 </html>

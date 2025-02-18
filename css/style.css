@@ -3621,13 +3621,13 @@ header {
 .head-block-catalog__icons {
   font-size: 0.75rem;
 }
-.head-block-catalog__icons.active > .head-block-catalog__icon:nth-child(1) {
+.head-block-catalog__icons.active > .head-block-catalog__icon:nth-child(2) {
   display: none;
 }
-.head-block-catalog__icons.active > .head-block-catalog__icon:nth-child(2)::before {
+.head-block-catalog__icons.active > .head-block-catalog__icon:nth-child(1)::before {
   display: block;
 }
-.head-block-catalog__icon:nth-child(2)::before {
+.head-block-catalog__icon:nth-child(1)::before {
   display: none;
 }
 
@@ -3679,6 +3679,42 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .price-sub-menu__button {
   padding: 0.5rem 1rem;
+}
+
+.range-sub-menu {
+  padding: 0.9375rem;
+}
+.range-sub-menu .noUi-target {
+  height: 0.1875rem;
+  background-color: #ffbc57;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.range-sub-menu .noUi-handle-lower,
+.range-sub-menu .noUi-handle-upper {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ffbc57;
+  border-radius: 50%;
+  top: -0.4375rem;
+  overflow: hidden;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+.range-sub-menu .noUi-connect {
+  background: #2b2929;
+}
+.range-sub-menu .noUi-handle-lower {
+  right: -0.625rem;
+}
+.range-sub-menu .noUi-handle-upper {
+  right: -0.625rem;
+}
+.range-sub-menu .noUi-handle:after,
+.range-sub-menu .noUi-handle:before {
+  display: none;
 }
 
 .checkbox-sub-menu {

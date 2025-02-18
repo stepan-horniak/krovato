@@ -370,11 +370,11 @@
     font-size: toRem(12);
 
     &.active {
-      & > .head-block-catalog__icon:nth-child(1) {
+      & > .head-block-catalog__icon:nth-child(2) {
         display: none;
       }
 
-      & > .head-block-catalog__icon:nth-child(2) {
+      & > .head-block-catalog__icon:nth-child(1) {
         &::before {
           display: block;
         }
@@ -384,7 +384,7 @@
   //.head-block-catalog__icon
 
   &__icon {
-    &:nth-child(2) {
+    &:nth-child(1) {
       &::before {
         display: none;
       }
@@ -457,29 +457,40 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .button {
 }
-// .range-sub-menu {
-//   // .range-sub-menu__label
+.range-sub-menu {
+  padding: toRem(15);
+  .noUi-target {
+    height: toRem(3);
+    background-color: $yellowColor;
+    border: none;
+    box-shadow: none;
+  }
+  .noUi-handle-lower,
+  .noUi-handle-upper {
+    width: toRem(16);
+    height: toRem(16);
+    background-color: $yellowColor;
+    border-radius: 50%;
+    top: toRem(-7);
+    overflow: hidden;
+    box-shadow: none;
+    border: none;
+  }
+  .noUi-connect {
+    background: $mainColor;
+  }
+  .noUi-handle-lower {
+    right: toRem(-10);
+  }
+  .noUi-handle-upper {
+    right: toRem(-10);
+  }
+  .noUi-handle:after,
+  .noUi-handle:before {
+    display: none;
+  }
+}
 
-//   &__label {
-//     display: flex;
-//     position: relative;
-//     z-index: 1;
-//   }
-
-//   // .range-sub-menu__from
-
-//   &__from {
-//     position: absolute;
-//     z-index: 2;
-//   }
-
-//   // .range-sub-menu__to
-
-//   &__to {
-//     position: absolute;
-//     z-index: 2;
-//   }
-// }
 .checkbox-sub-menu {
   padding: 0 toRem(15) toRem(15) toRem(15);
   // .checkbox-sub-menu__label

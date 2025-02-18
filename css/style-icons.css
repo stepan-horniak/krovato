@@ -1,7 +1,9 @@
 /* fsssf */
 @font-face {
   font-family: "icons";
-  src: url("../fonts-icons/icons.woff?jbkpsa") format("woff");
+  src: url("../fonts-icons/icons.woff") format("woff");
+  /* src: url("../fonts-icons/icons.woff?jbkpsa") format("woff"); */
+
   font-weight: normal;
   font-style: normal;
   font-display: block;
