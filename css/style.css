@@ -3536,6 +3536,9 @@ header {
 .catalog__content {
   grid-area: content;
   align-self: start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+  gap: 1.875rem;
 }
 @media (max-width: 47.99875em) {
   .catalog__content {
@@ -3719,9 +3722,18 @@ input[type=number]::-webkit-inner-spin-button {
 
 .checkbox-sub-menu {
   padding: 0 0.9375rem 0.9375rem 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
 }
 .checkbox-sub-menu__label {
   cursor: pointer;
+  position: relative;
 }
 .checkbox-sub-menu__input {
   width: 1rem;
@@ -3729,6 +3741,7 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  position: absolute;
 }
 .checkbox-sub-menu__input:checked ~ .checkbox-sub-menu__span {
   position: relative;

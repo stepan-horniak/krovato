@@ -465,7 +465,7 @@ function windowLoaded() {
   const arrInputs = [intutFrom, intutTo]
   if (rangeSlider) {
     noUiSlider.create(rangeSlider, {
-      start: [1195, 9566],
+      start: [5000, 20000],
       connect: true,
       step: 1,
       range: {
@@ -571,7 +571,7 @@ function windowLoaded() {
 
     containerSum.textContent = `${sum} грн`
   }
-  //====================add-filters-checkbox=========
+  //====================filters-checkbox=========
   function removeElementChecked(el) {
     const textEl = el.textContent
 
@@ -604,12 +604,26 @@ function windowLoaded() {
     const containerAddElements = document.querySelector(
       ".cancel-filter-catalog__row"
     )
+    const currentElements = containerAddElements.querySelectorAll(
+      ".cancel-filter-catalog__button"
+    )
+    const buttonClearList = containerAddElements.querySelector(
+      ".cancel-filter-catalog__button--Yelow"
+    )
+    const buttonPrice = containerAddElements.querySelector(
+      ".cancel-filter-catalog__button-price"
+    )
+
+    for (const element of currentElements) {
+      if (element !== buttonClearList && element !== buttonPrice) {
+        element.remove()
+      }
+    }
+
     const listChecked = document.querySelectorAll(
       'input[type="checkbox"].checkbox-sub-menu__input:checked'
     )
-    while (containerAddElements.children.length > 1) {
-      containerAddElements.removeChild(containerAddElements.lastElementChild)
-    }
+
     listChecked.forEach((el) => {
       const span = el.nextElementSibling.textContent
       const createButton = document.createElement("button")
@@ -624,25 +638,142 @@ function windowLoaded() {
     const containerAddElements = document.querySelector(
       ".cancel-filter-catalog__row"
     )
+
+    const elements = containerAddElements.querySelectorAll(
+      ".cancel-filter-catalog__button"
+    )
+
+    elements.forEach((el) => {
+      if (el.textContent.startsWith("Ціна:")) {
+        el.remove()
+      }
+    })
     const inputFrom = document.querySelector(".price-sub-menu__price-from")
     const inputTo = document.querySelector(".price-sub-menu__price-to")
     const createButton = document.createElement("button")
     createButton.textContent = `Ціна: ${inputFrom.value} - ${inputTo.value}`
+    createButton.classList.add("cancel-filter-catalog__button-price")
     createButton.classList.add("cancel-filter-catalog__button")
     createButton.classList.add("_icon-cross")
     containerAddElements.append(createButton)
   }
 
-  const catalogFilters = document.querySelector(".catalog__grid")
-  console.log(catalogFilters)
-  if (catalogFilters) {
-    addFilterSum()
-
-    const inputFrom = document.querySelector(".price-sub-menu__price-from")
-    const inputTo = document.querySelector(".price-sub-menu__price-to")
-    console.log(inputTo.value)
-    console.log("vweivewvewuvweubvwo")
-
+  if (document.querySelector(".catalog__grid")) {
     addCheckedElements()
+    addFilterSum()
   }
+  //=============components-beds====================
+  class CreateBeds {
+    constructor(arrBebs) {
+      this.arrBebs = arrBebs
+    }
+    createCard(
+      manufacturer,
+      type,
+      size,
+      category,
+      name,
+      availability,
+      src,
+      price,
+      discountPrice
+    ) {
+      const divContainerCard = document.createElement("div")
+      divContainerCard.className = "card-popular"
+      divContainerCard.setAttribute("manufacturer", manufacturer)
+      divContainerCard.setAttribute("type", type)
+      divContainerCard.setAttribute("category", category)
+
+      //=============================
+      const aElImage = document.createElement("a")
+      aElImage.className = "card-popular__image"
+      aElImage.setAttribute("href", "#")
+      const imgEl = document.createElement("img")
+      imgEl.setAttribute("src", src)
+      imgEl.setAttribute("href", "#")
+      imgEl.setAttribute("alt", "Bed Image")
+      aElImage.append(imgEl)
+      divContainerCard.append(aElImage)
+
+      const divElParameter = document.createElement("div")
+      divElParameter.className = "card-popular__parameters"
+      divElParameter.textContent = `Розмір: ${size} мм`
+      divContainerCard.append(divElParameter)
+
+      const divElTitle = document.createElement("div")
+      divElTitle.className = "card-popular__title"
+      divElTitle.textContent = name
+      divContainerCard.append(divElTitle)
+
+      const divElInStock = document.createElement("div")
+      divElInStock.classList.add("card-popular__in-stoсk")
+      if (availability === "В наявності")
+        divElInStock.classList.add("_icon-in-stock")
+      else divElInStock.classList.add("_icon-cross")
+      divElInStock.textContent = availability
+      divContainerCard.append(divElInStock)
+      //=================================================
+      const divElBay = document.createElement("div")
+      divElBay.classList.add("card-popular__buy")
+      divElBay.classList.add("card-popular-buy")
+
+      const divElPrice = document.createElement("div")
+      divElPrice.classList.add("card-popular-buy__price")
+      divElPrice.classList.add("card-price")
+
+      const divElPriceSale = document.createElement("div")
+      divElPriceSale.classList.add("card-price__sale")
+      divElPriceSale.textContent = discountPrice
+      divElPrice.append(divElPriceSale)
+
+      const divElPricePrice = document.createElement("div")
+      divElPricePrice.classList.add("card-price__price")
+      divElPricePrice.textContent = price
+      divElPrice.append(divElPricePrice)
+
+      divElBay.append(divElPrice)
+
+      const divElLikes = document.createElement("div")
+      divElLikes.classList.add("card-popular-buy__likes")
+      divElLikes.classList.add("_icon-likes")
+      divElBay.append(divElLikes)
+
+      const divElBasket = document.createElement("div")
+      divElBasket.classList.add("card-popular-buy__basket")
+      divElBasket.classList.add("_icon-basket")
+      divElBay.append(divElBasket)
+
+      divContainerCard.append(divElBay)
+      this.card = divContainerCard
+      return divContainerCard
+    }
+    render() {
+      const container = document.querySelector(".catalog__content")
+      if (container) {
+        for (const element of this.arrBebs) {
+          container.append(
+            this.createCard(
+              element.manufacturer,
+              element.type,
+              element.size,
+              element.category,
+              element.name,
+              element.availability,
+              element.src,
+              element.price,
+              element.discountPrice
+            )
+          )
+        }
+      }
+    }
+  }
+  const createBeds = new CreateBeds(beds)
+  createBeds.render()
+  //======================show-content-button
+  const containerBeds = document.querySelector(".catalog__content")
+  if (containerBeds) {
+  }
+
+  //==========================
 }

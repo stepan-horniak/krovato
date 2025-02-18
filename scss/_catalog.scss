@@ -262,6 +262,9 @@
   &__content {
     grid-area: content;
     align-self: start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+    gap: 1.875rem;
     @media (max-width: toEm(767.98)) {
       align-self: auto;
     }
@@ -493,10 +496,14 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .checkbox-sub-menu {
   padding: 0 toRem(15) toRem(15) toRem(15);
+  display: flex;
+  flex-direction: column;
+  gap: toRem(10);
   // .checkbox-sub-menu__label
 
   &__label {
     cursor: pointer;
+    position: relative;
   }
 
   // .checkbox-sub-menu__input
@@ -505,6 +512,7 @@ input[type="number"]::-webkit-inner-spin-button {
     width: toRem(16);
     height: toRem(16);
     appearance: none;
+    position: absolute;
     &:checked {
       ~ .checkbox-sub-menu__span {
         position: relative;
