@@ -233,7 +233,6 @@
     grid-template-columns: toRem(300) 1fr;
     grid-template-areas:
       "aside filters"
-      "aside content"
       "aside content";
     @media (max-width: toEm(767.98)) {
       display: flex;
@@ -261,12 +260,30 @@
 
   &__content {
     grid-area: content;
+    display: grid;
+    gap: toRem(30);
+  }
+  //.catalog__products
+  &__products {
     align-self: start;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
-    gap: 1.875rem;
+    gap: toRem(30);
+    margin-bottom: toRem(40);
     @media (max-width: toEm(767.98)) {
       align-self: auto;
+    }
+  }
+  //.catalog__button-more
+  &__button-more {
+    justify-self: center;
+    padding: toRem(13) toRem(40);
+    display: flex;
+    align-items: center;
+    gap: toRem(17);
+    width: fit-content;
+    &::before {
+      font-size: toRem(20);
     }
   }
 }

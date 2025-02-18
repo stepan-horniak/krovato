@@ -224,10 +224,6 @@ function windowLoaded() {
     if (el.closest(".price-sub-menu__button")) {
       addFilterSum()
     }
-    //===================catalog-more-products==============================
-    if (el.closest(".catalog__button-more")) {
-      seeMoreProduct()
-    }
     //===================hidden-body==============================
     if (
       (burgerHeader.classList.contains("active") && window.innerWidth <= 500) ||
@@ -775,30 +771,9 @@ function windowLoaded() {
   const createBeds = new CreateBeds(beds)
   createBeds.render()
   //======================show-content-button
-  let countSeeMoreProduct = 9
-
-  function seeMoreProduct(num = 10) {
-    const containerBeds = document.querySelector(".catalog__products")
-    if (containerBeds) {
-      const products = document.querySelectorAll(".card-popular")
-      products.forEach((el) => {
-        el.style.display = "flex"
-      })
-      if (countSeeMoreProduct + num > products.length) {
-        let remainder = products.length % num
-        countSeeMoreProduct += remainder
-        const buttonMore = document.querySelector(".catalog__button-more")
-        buttonMore.style.display = "none"
-      } else countSeeMoreProduct += num
-
-      products.forEach((el, index) => {
-        if (index > countSeeMoreProduct) {
-          el.style.display = "none"
-        }
-      })
-    } else return
+  const containerBeds = document.querySelector(".catalog__content")
+  if (containerBeds) {
   }
-  seeMoreProduct()
 
   //==========================
 }
