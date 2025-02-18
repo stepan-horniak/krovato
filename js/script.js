@@ -777,7 +777,7 @@ function windowLoaded() {
   //======================show-content-button
   let countSeeMoreProduct = 9
 
-  function seeMoreProduct(num = 10) {
+  function seeMoreProduct(num = 5) {
     const containerBeds = document.querySelector(".catalog__products")
     if (containerBeds) {
       const products = document.querySelectorAll(".card-popular")
