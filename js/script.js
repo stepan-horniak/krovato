@@ -183,7 +183,8 @@ function windowLoaded() {
     const headerBasketBlock = document.querySelector(".header-basket")
     if (
       el.closest(".header-main-favorite__basket") ||
-      el.closest(".top-header-basket__cross")
+      el.closest(".top-header-basket__cross") ||
+      el.closest(".buttons-header-basket__continue")
     ) {
       headerBasketBlock.classList.toggle("active")
     }
@@ -795,8 +796,11 @@ function windowLoaded() {
       }
     }
   }
-  const createBeds = new CreateBeds(beds)
-  createBeds.render()
+  const containerBeds = document.querySelector(".catalog__products")
+  if (containerBeds) {
+    const createBeds = new CreateBeds(beds)
+    createBeds.render()
+  }
   //======================show-content-button===========================
   function seeMoreProduct() {
     const containerBeds = document.querySelector(".catalog__products")
