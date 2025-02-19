@@ -3,6 +3,7 @@
 
   &__container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: toRem(10);
     line-height: 1.87; /* 30/16 */

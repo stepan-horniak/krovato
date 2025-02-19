@@ -938,12 +938,8 @@
     @media (max-width: toEm(991.98)) {
       display: flex;
       gap: 10px;
-      position: absolute;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
       justify-content: center;
-      bottom: toRem(-30) !important;
-      z-index: 2;
+      padding-top: toRem(20);
       & > span {
         width: toRem(15);
         height: toRem(15);

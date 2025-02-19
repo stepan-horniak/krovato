@@ -25,6 +25,7 @@
   // .main-slider__swiper
 
   &__swiper {
+    margin-bottom: toRem(30);
   }
 
   // .main-slider__swiper-wrapper
@@ -54,6 +55,25 @@
 
   &__swiper-pagination {
     display: none;
+    @media (max-width: toEm(767.98)) {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      padding-top: toRem(20);
+      & > span {
+        width: toRem(15);
+        height: toRem(15);
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: toRem(3) solid #b1b1b1;
+        opacity: 1;
+        z-index: 2;
+      }
+      & .swiper-pagination-bullet-active {
+        border: toRem(3) solid #ffffff;
+        background-color: #ffbc57;
+      }
+    }
   }
 
   // .main-slider__swiper-button-prev
@@ -68,6 +88,9 @@
     background-image: url(../images/main-product/arrow-left-slider.svg);
     rotate: 180deg;
     cursor: pointer;
+    @media (max-width: toEm(767.98)) {
+      display: none;
+    }
   }
 
   // .main-slider__swiper-button-next
@@ -82,15 +105,24 @@
     width: toRem(60);
     height: toRem(60);
     background-image: url(../images/main-product/arrow-left-slider.svg);
+    @media (max-width: toEm(767.98)) {
+      display: none;
+    }
   }
   .swiper-slide-thumb-active {
-    border: toRem(3) solid $yellowColor;
+    .reviews__image {
+      border: toRem(3) solid $yellowColor;
+      border-radius: toRem(8);
+    }
   }
 }
 .reviews {
   // .reviews__swiper
 
   &__swiper {
+    @media (max-width: toEm(767.98)) {
+      display: none;
+    }
     // width: toRem(100);
     // height: toRem(100);
   }
@@ -110,8 +142,12 @@
   &__image {
     border-radius: toRem(8);
     overflow: hidden;
-    width: 100px;
-    height: 100px;
+    width: toRem(100);
+    height: toRem(90);
+    @media (max-width: toEm(991.98)) {
+      width: toRem(80);
+      height: toRem(80);
+    }
     & > img {
       width: 100%;
       height: 100%;

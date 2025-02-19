@@ -492,10 +492,27 @@ function windowLoaded() {
   //=======================================
 
   const mainProductReviews = new Swiper(".reviews__swiper", {
-    spaceBetween: 10,
+    spaceBetween: 20,
     slidesPerView: 5,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      // Медіа-запит для екранів до 460px
+      319.98: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // Медіа-запит для екранів до 768px
+      767.98: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+      },
+      // Медіа-запит для екранів до 1024px
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+    },
   })
   const mainProduct = new Swiper(".main-slider__swiper", {
     loop: true, // Безкінечний слайдер
@@ -505,10 +522,10 @@ function windowLoaded() {
       nextEl: ".main-slider__swiper-button-prev", // Кнопка для переходу до наступного слайду
       prevEl: ".main-slider__swiper-button-next", // Кнопка для повернення до попереднього слайду
     },
-    // pagination: {
-    //   el: ".main-slider__swiper-pagination", // Пагінація
-    //   clickable: true, // Дозволяє натискати на точки пагінації
-    // },
+    pagination: {
+      el: ".main-slider__swiper-pagination", // Пагінація
+      clickable: true, // Дозволяє натискати на точки пагінації
+    },
     thumbs: {
       swiper: mainProductReviews,
     },
