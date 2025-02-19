@@ -489,6 +489,30 @@ function windowLoaded() {
       },
     },
   })
+  //=======================================
+
+  const mainProductReviews = new Swiper(".reviews__swiper", {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+  })
+  const mainProduct = new Swiper(".main-slider__swiper", {
+    loop: true, // Безкінечний слайдер
+    // slidesPerView: 1, // Три слайди на екрані
+    spaceBetween: 10, // Відстань між слайдами
+    navigation: {
+      nextEl: ".main-slider__swiper-button-prev", // Кнопка для переходу до наступного слайду
+      prevEl: ".main-slider__swiper-button-next", // Кнопка для повернення до попереднього слайду
+    },
+    // pagination: {
+    //   el: ".main-slider__swiper-pagination", // Пагінація
+    //   clickable: true, // Дозволяє натискати на точки пагінації
+    // },
+    thumbs: {
+      swiper: mainProductReviews,
+    },
+  })
   //=============================================
   //========================aside-range====================
   const rangeSlider = document.getElementById("uiRangeSlider")

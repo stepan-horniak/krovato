@@ -36,7 +36,9 @@
   // .pages__beds
 
   &__beds {
-    color: $yellowColor;
+    &:last-child {
+      color: $yellowColor;
+    }
     @media (any-hover: hover) {
       &:hover {
         transition: all 0.3s;
