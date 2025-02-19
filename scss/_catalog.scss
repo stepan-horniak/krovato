@@ -282,6 +282,7 @@
     align-items: center;
     gap: toRem(17);
     width: fit-content;
+    height: fit-content;
     &::before {
       font-size: toRem(20);
     }
@@ -672,5 +673,117 @@ input[type="number"]::-webkit-inner-spin-button {
 
   &__button--Yelow {
     background-color: $yellowColor;
+  }
+}
+//=============question====================
+
+.question {
+  // .question__container
+
+  &__container {
+    padding: toRem(70) toRem(15);
+    max-width: toRem(1100);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(40);
+  }
+
+  // .question__title
+
+  &__title {
+    align-self: center;
+  }
+}
+
+.card-question {
+  // .card-question__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(15);
+  }
+
+  // .card-question__item
+
+  &__item {
+  }
+}
+.item-question {
+  background-color: white;
+  border-radius: toRem(8);
+  box-shadow: toRem(-3) toRem(4) toRem(15) 0 #0000000f;
+  padding: toRem(15);
+  overflow: hidden;
+  cursor: pointer;
+  // transition: all 0.8s;
+
+  &.active {
+    border: toRem(2) solid $yellowColor;
+    .item-question__text {
+      max-height: toRem(1000);
+      transition: all 0.8s;
+      opacity: 1;
+      visibility: visible;
+    }
+    .title-item-question__arrow {
+      &::before {
+        rotate: 180deg;
+        font-size: toRem(13);
+      }
+    }
+  }
+  // .item-question__title
+
+  &__title {
+  }
+
+  // .item-question__text
+
+  &__text {
+    position: relative;
+    line-height: 1.87; /* 30/16 */
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: all 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+  }
+}
+.title-item-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: toRem(10);
+  // .title-item-question__text
+
+  &__text {
+    font-size: toRem(19);
+    font-weight: 600;
+    line-height: 1.26; /* 24/19 */
+    display: flex;
+    align-items: center;
+    gap: toRem(18);
+    &::before {
+      font-size: toRem(33);
+      color: $yellowColor;
+    }
+  }
+
+  // .title-item-question__arrow
+
+  &__arrow {
+    &::before {
+      transition: all 0.3s;
+      font-size: toRem(13);
+    }
+  }
+}
+@media (max-width: toEm(767.98)) {
+  .delivery {
+    display: none;
   }
 }

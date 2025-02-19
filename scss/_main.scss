@@ -894,15 +894,17 @@
     gap: toRem(13);
     background-color: #e9e9e9;
     color: $mainColor;
+    border-radius: toRem(8);
     cursor: pointer;
     &::before {
       font-size: toRem(24);
+      font-weight: 600;
     }
     transition: all 0.3s;
     &:hover {
       background-color: $yellowColor;
+      color: white;
       &::before {
-        color: white;
       }
     }
   }

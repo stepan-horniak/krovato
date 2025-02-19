@@ -878,7 +878,7 @@
                       <span class="checkbox-sub-menu__span">В наявності</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
-                      <input type="checkbox" class="checkbox-sub-menu__input">
+                      <input type="checkbox" checked class="checkbox-sub-menu__input">
                       <span class="checkbox-sub-menu__span">Під замовлення</span>
                     </label>
                   </div>
@@ -896,7 +896,7 @@
                 <div class="block-aside-filter-catalog__sub-menu sub-menu-block-catalog">
                   <div class="sub-menu-block-catalog__checkbox checkbox-sub-menu">
                     <label class="checkbox-sub-menu__label">
-                      <input type="checkbox" checked class="checkbox-sub-menu__input">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
                       <span class="checkbox-sub-menu__span">Corners</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
@@ -904,7 +904,7 @@
                       <span class="checkbox-sub-menu__span">Estella</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
-                      <input type="checkbox" checked class="checkbox-sub-menu__input">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
                       <span class="checkbox-sub-menu__span">Green Line</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
@@ -916,7 +916,7 @@
                       <span class="checkbox-sub-menu__span">MiroMark</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
-                      <input type="checkbox" checked class="checkbox-sub-menu__input">
+                      <input type="checkbox" class="checkbox-sub-menu__input">
                       <span class="checkbox-sub-menu__span">Novelty</span>
                     </label>
                     <label class="checkbox-sub-menu__label">
@@ -1239,16 +1239,19 @@
                 <div class="top-filter-catalog__selection-text">Ви вибрали:</div>
                 <div class="top-filter-catalog__sort-text _icon-firter">Сортування:</div>
                 <select class="top-filter-catalog__sort-popap _icon-arrow-down">
-                  <option value="">За зростанням ціни</option>
-                  <option value="">За спаданням ціни</option>
+                  <option value='' disabled selected hidden>Оберіть сортування </option>
+                  <option value="upPrice">За зростанням ціни</option>
+                  <option value="downPrice">За спаданням ціни</option>
 
                 </select>
 
               </div>
               <div class="filter-catalog__cancel cancel-filter-catalog">
                 <div class="cancel-filter-catalog__row">
-                  <button
-                    class="cancel-filter-catalog__button cancel-filter-catalog__button--Yelow _icon-cross">Очистити</button>
+                  <div>
+                    <button
+                      class="cancel-filter-catalog__button cancel-filter-catalog__button--Yelow _icon-cross">Очистити</button>
+                  </div>
 
                 </div>
               </div>
@@ -1348,7 +1351,7 @@
                 <div class="section-shop-reviews__info">Базовано на відгуках: 269</div>
               </div>
               <div class="shop-reviews__buttons buttons-shop-reviews">
-                <button class="buttons-shop-reviews__message _icon-message">Написати відгук</button>
+                <button class="buttons-shop-reviews__message button _icon-message">Написати відгук</button>
                 <button class="buttons-shop-reviews__reviews _icon-coment">Всі відгуки</button>
               </div>
             </div>
@@ -1718,6 +1721,153 @@
         <!-- ============================================================== -->
       </article>
 
+      <section class="question">
+        <div class="question__container">
+          <div class="question__title title">Питання, які часто задають про Ліжка</div>
+          <ul class="card-question__list">
+            <li class="card-question__item item-question">
+              <div class="item-question__title title-item-question">
+                <div class="title-item-question__text _icon-question">Яке ліжко краще підійде для “хрущьовки”?</div>
+                <div class="title-item-question__arrow _icon-arrow-down"></div>
+              </div>
+              <div class="item-question__text">
+                <p>
+                  Односпальне ліжко — оптимальний варіант для сну однієї людини. Вироби представлені в декількох
+                  стандартних розмірах по ширині: 80-90, рідше — 100 сантиметрів.
+                </p>
+                <p>
+                  Полуторні ліжка нагадують односпальні, але зі збільшеною шириною — в середньому 120-140 сантиметрів.
+                  Меблі підійдуть для одиночного сну людям з великою статурою або для худорлявої пари.
+                </p>
+                <p>
+                  Двоспальне місце для сну відрізняється простором і комфортом для двох дорослих, а також сімей, в
+                  яких
+                  діти люблять засинати разом з батьками. Ширина ліжка — від 160 см при стандартній довжині, а в
+                  розмірі
+                  king size — понад 200 см.
+                </p>
+              </div>
+            </li>
+
+            <li class="card-question__item item-question">
+              <div class="item-question__title title-item-question">
+                <div class="title-item-question__text _icon-question">Як підібрати розмір ліжка</div>
+                <div class="title-item-question__arrow _icon-arrow-down"></div>
+              </div>
+              <div class="item-question__text">
+                <p>
+                  Односпальне ліжко — оптимальний варіант для сну однієї людини. Вироби представлені в декількох
+                  стандартних розмірах по ширині: 80-90, рідше — 100 сантиметрів.
+                </p>
+                <p>
+                  Полуторні ліжка нагадують односпальні, але зі збільшеною шириною — в середньому 120-140 сантиметрів.
+                  Меблі підійдуть для одиночного сну людям з великою статурою або для худорлявої пари.
+                </p>
+                <p>
+                  Двоспальне місце для сну відрізняється простором і комфортом для двох дорослих, а також сімей, в
+                  яких
+                  діти люблять засинати разом з батьками. Ширина ліжка — від 160 см при стандартній довжині, а в
+                  розмірі
+                  king size — понад 200 см.
+                </p>
+              </div>
+            </li>
+            <li class="card-question__item item-question">
+              <div class="item-question__title title-item-question">
+                <div class="title-item-question__text _icon-question">У покупку ліжка входить її доставка, збирання та
+                  встановлення в кімнаті?</div>
+                <div class="title-item-question__arrow _icon-arrow-down"></div>
+              </div>
+              <div class="item-question__text">
+                <p>
+                  Односпальне ліжко — оптимальний варіант для сну однієї людини. Вироби представлені в декількох
+                  стандартних розмірах по ширині: 80-90, рідше — 100 сантиметрів.
+                </p>
+                <p>
+                  Полуторні ліжка нагадують односпальні, але зі збільшеною шириною — в середньому 120-140 сантиметрів.
+                  Меблі підійдуть для одиночного сну людям з великою статурою або для худорлявої пари.
+                </p>
+                <p>
+                  Двоспальне місце для сну відрізняється простором і комфортом для двох дорослих, а також сімей, в
+                  яких
+                  діти люблять засинати разом з батьками. Ширина ліжка — від 160 см при стандартній довжині, а в
+                  розмірі
+                  king size — понад 200 см.
+                </p>
+              </div>
+            </li>
+            <li class="card-question__item item-question">
+              <div class="item-question__title title-item-question">
+                <div class="title-item-question__text _icon-question">Найдешевші ліжка - це обов’язково погана якість?
+                </div>
+                <div class="title-item-question__arrow _icon-arrow-down"></div>
+              </div>
+              <div class="item-question__text">
+                <p>
+                  Односпальне ліжко — оптимальний варіант для сну однієї людини. Вироби представлені в декількох
+                  стандартних розмірах по ширині: 80-90, рідше — 100 сантиметрів.
+                </p>
+                <p>
+                  Полуторні ліжка нагадують односпальні, але зі збільшеною шириною — в середньому 120-140 сантиметрів.
+                  Меблі підійдуть для одиночного сну людям з великою статурою або для худорлявої пари.
+                </p>
+                <p>
+                  Двоспальне місце для сну відрізняється простором і комфортом для двох дорослих, а також сімей, в
+                  яких
+                  діти люблять засинати разом з батьками. Ширина ліжка — від 160 см при стандартній довжині, а в
+                  розмірі
+                  king size — понад 200 см.
+                </p>
+              </div>
+            </li>
+            <li class="card-question__item item-question">
+              <div class="item-question__title title-item-question">
+                <div class="title-item-question__text _icon-question">Можно замовити ліжко під свої розміри?</div>
+                <div class="title-item-question__arrow _icon-arrow-down"></div>
+              </div>
+              <div class="item-question__text">
+                <p>
+                  Односпальне ліжко — оптимальний варіант для сну однієї людини. Вироби представлені в декількох
+                  стандартних розмірах по ширині: 80-90, рідше — 100 сантиметрів.
+                </p>
+                <p>
+                  Полуторні ліжка нагадують односпальні, але зі збільшеною шириною — в середньому 120-140 сантиметрів.
+                  Меблі підійдуть для одиночного сну людям з великою статурою або для худорлявої пари.
+                </p>
+                <p>
+                  Двоспальне місце для сну відрізняється простором і комфортом для двох дорослих, а також сімей, в
+                  яких
+                  діти люблять засинати разом з батьками. Ширина ліжка — від 160 см при стандартній довжині, а в
+                  розмірі
+                  king size — понад 200 см.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="delivery">
+        <div class="delivery__container">
+          <div class="delivery__row">
+            <div class="delivery__block block-delivery">
+              <div class="block-delivery__image"><img src="./images/delivery/preim-1.svg" alt="icon"></div>
+              <div class="block-delivery__text">Безкоштовна доставка</div>
+            </div>
+            <div class="delivery__block block-delivery">
+              <div class="block-delivery__image"><img src="./images/delivery/preim-2.svg" alt="icon"></div>
+              <div class="block-delivery__text">Безкоштовна збірка</div>
+            </div>
+            <div class="delivery__block block-delivery">
+              <div class="block-delivery__image"><img src="./images/delivery/preim-3.svg" alt="icon"></div>
+              <div class="block-delivery__text">Післягарантійне обслуговування</div>
+            </div>
+            <div class="delivery__block block-delivery">
+              <div class="block-delivery__image"><img src="./images/delivery/preim-4.svg" alt="icon"></div>
+              <div class="block-delivery__text">Знижки клієнтам</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer__wrapper">

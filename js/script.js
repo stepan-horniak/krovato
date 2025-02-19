@@ -211,23 +211,47 @@ function windowLoaded() {
     //========================add-list-filters====================
     if (el.closest(".checkbox-sub-menu__label")) {
       addCheckedElements()
+      filterProductsPrice(beds)
+
+      filtersCatalog(beds)
     }
     if (el.closest(".cancel-filter-catalog__button--Yelow")) {
       removeListChecked()
+      filterProductsPrice(beds)
+
+      filtersCatalog(beds)
     }
     if (el.closest(".cancel-filter-catalog__button")) {
       if (!el.classList.contains("cancel-filter-catalog__button--Yelow")) {
         removeElementChecked(el)
         el.remove()
+        filterProductsPrice(beds)
+
+        filtersCatalog(beds)
       }
     }
     if (el.closest(".price-sub-menu__button")) {
       addFilterSum()
+      filterProductsPrice(beds)
     }
     //===================catalog-more-products==============================
     if (el.closest(".catalog__button-more")) {
-      seeMoreProduct()
+      showMoreProducts()
     }
+
+    //======================question-popap===========================
+    if (el.closest(".card-question__item")) {
+      const currentElement = el.closest(".card-question__item")
+      const elements = document.querySelectorAll(".card-question__item")
+
+      if (currentElement.classList.contains("active")) {
+        currentElement.classList.remove("active")
+      } else {
+        elements.forEach((el) => el.classList.remove("active"))
+        currentElement.classList.add("active")
+      }
+    }
+
     //===================hidden-body==============================
     if (
       (burgerHeader.classList.contains("active") && window.innerWidth <= 500) ||
@@ -603,7 +627,7 @@ function windowLoaded() {
     )
     listChecked.forEach((el) => (el.checked = false))
   }
-  //====================
+  //===========
   function addCheckedElements() {
     const containerAddElements = document.querySelector(
       ".cancel-filter-catalog__row"
@@ -637,7 +661,7 @@ function windowLoaded() {
       containerAddElements.append(createButton)
     })
   }
-  //==============
+  //===========
   function addFilterSum() {
     const containerAddElements = document.querySelector(
       ".cancel-filter-catalog__row"
@@ -662,10 +686,6 @@ function windowLoaded() {
     containerAddElements.append(createButton)
   }
 
-  if (document.querySelector(".catalog__grid")) {
-    addCheckedElements()
-    addFilterSum()
-  }
   //=============components-beds====================
   class CreateBeds {
     constructor(arrBebs) {
@@ -686,8 +706,11 @@ function windowLoaded() {
       divContainerCard.className = "card-popular"
       divContainerCard.setAttribute("manufacturer", manufacturer)
       divContainerCard.setAttribute("type", type)
+      divContainerCard.setAttribute("name", name)
       divContainerCard.setAttribute("category", category)
-
+      divContainerCard.setAttribute("availability", availability)
+      divContainerCard.setAttribute("size", size)
+      divContainerCard.setAttribute("price", price)
       //=============================
       const aElImage = document.createElement("a")
       aElImage.className = "card-popular__image"
@@ -774,31 +797,117 @@ function windowLoaded() {
   }
   const createBeds = new CreateBeds(beds)
   createBeds.render()
-  //======================show-content-button
-  let countSeeMoreProduct = 9
-
-  function seeMoreProduct(num = 5) {
+  //======================show-content-button===========================
+  function seeMoreProduct() {
     const containerBeds = document.querySelector(".catalog__products")
-    if (containerBeds) {
-      const products = document.querySelectorAll(".card-popular")
-      products.forEach((el) => {
-        el.style.display = "flex"
-      })
-      if (countSeeMoreProduct + num > products.length) {
-        let remainder = products.length % num
-        countSeeMoreProduct += remainder
-        const buttonMore = document.querySelector(".catalog__button-more")
-        buttonMore.style.display = "none"
-      } else countSeeMoreProduct += num
+    if (!containerBeds) return
+
+    let count = 9
+    const products = Array.from(containerBeds.querySelectorAll(".card-popular"))
+
+    products.forEach((el, index) => {
+      el.style.display = index < count ? "flex" : "none"
+    })
+
+    return function showMore() {
+      count += 6
 
       products.forEach((el, index) => {
-        if (index > countSeeMoreProduct) {
-          el.style.display = "none"
+        if (index < count) {
+          el.style.display = "flex"
         }
       })
-    } else return
-  }
-  seeMoreProduct()
 
-  //==========================
+      if (count >= products.length) {
+        document.querySelector(".catalog__button-more").style.display = "none"
+      }
+    }
+  }
+  const showMoreProducts = seeMoreProduct()
+
+  //==================filter-catalog============
+
+  function filtersCatalog(dataList) {
+    const filtersContainer = document.querySelector(
+      ".cancel-filter-catalog__row"
+    )
+    const allButtons = filtersContainer.querySelectorAll(
+      ".cancel-filter-catalog__button"
+    )
+
+    document.querySelector(".catalog__products").innerHTML = ""
+
+    const filtersText = Array.from(allButtons)
+      .filter((btn) => btn.parentElement === filtersContainer)
+      .map((el) =>
+        el.textContent.trim().toLocaleLowerCase().replaceAll(" ", "")
+      )
+
+    const res = dataList.filter((list) => {
+      return filtersText.some((filter) => {
+        return Object.values(list).some((value) => {
+          const normalizedValue = value
+            .toString()
+            .trim()
+            .toLowerCase()
+            .replaceAll(" ", "")
+          const normalizedFilter = filter
+          return normalizedValue === normalizedFilter
+        })
+      })
+    })
+
+    const createBeds = new CreateBeds(res)
+    createBeds.render()
+  }
+
+  function sortProductsPrice(e) {
+    const containerBeds = document.querySelector(".catalog__products")
+
+    const cards = Array.from(containerBeds.children)
+
+    if (e.target.value === "downPrice") {
+      cards.sort((a, b) => {
+        const priceA = parseInt(a.getAttribute("price"))
+        const priceB = parseInt(b.getAttribute("price"))
+
+        return priceB - priceA
+      })
+    }
+    if (e.target.value === "upPrice") {
+      cards.sort((a, b) => {
+        const priceA = parseInt(a.getAttribute("price"))
+        const priceB = parseInt(b.getAttribute("price"))
+
+        return priceA - priceB
+      })
+    }
+    containerBeds.innerHTML = ""
+    cards.forEach((el) => containerBeds.append(el))
+  }
+  function filterProductsPrice(dataList) {
+    const inputFrom = document.getElementById("price-from")
+    const inputTo = document.getElementById("price-to")
+    document.querySelector(".catalog__products").innerHTML = ""
+
+    const res = dataList.filter((el) => {
+      if (
+        parseFloat(el.price) > parseFloat(inputFrom.value) &&
+        parseFloat(el.price) < parseFloat(inputTo.value)
+      ) {
+        return el
+      }
+    })
+
+    const createBeds = new CreateBeds(res)
+    createBeds.render()
+  }
+  if (document.querySelector(".catalog__container")) {
+    addCheckedElements()
+
+    const selectSortBeds = document.querySelector(
+      ".top-filter-catalog__sort-popap"
+    )
+    selectSortBeds.addEventListener("change", (e) => sortProductsPrice(e))
+  }
 }
