@@ -215,25 +215,28 @@ function windowLoaded() {
       filterProductsPrice(beds)
 
       filtersCatalog(beds)
+      buttonseeMoreProduct()
     }
     if (el.closest(".cancel-filter-catalog__button--Yelow")) {
       removeListChecked()
       filterProductsPrice(beds)
 
       filtersCatalog(beds)
+      buttonseeMoreProduct()
     }
     if (el.closest(".cancel-filter-catalog__button")) {
       if (!el.classList.contains("cancel-filter-catalog__button--Yelow")) {
         removeElementChecked(el)
         el.remove()
         filterProductsPrice(beds)
-
         filtersCatalog(beds)
+        buttonseeMoreProduct()
       }
     }
     if (el.closest(".price-sub-menu__button")) {
       addFilterSum()
       filterProductsPrice(beds)
+      buttonseeMoreProduct()
     }
     //===================catalog-more-products==============================
     if (el.closest(".catalog__button-more")) {
@@ -801,6 +804,7 @@ function windowLoaded() {
     const createBeds = new CreateBeds(beds)
     createBeds.render()
   }
+
   //======================show-content-button===========================
   function seeMoreProduct() {
     const containerBeds = document.querySelector(".catalog__products")
@@ -828,7 +832,15 @@ function windowLoaded() {
     }
   }
   const showMoreProducts = seeMoreProduct()
-
+  function buttonseeMoreProduct() {
+    const productsContainer = containerBeds.querySelectorAll(".card-popular")
+    if (productsContainer) {
+      if (productsContainer.length < 9)
+        document.querySelector(".catalog__button-more").style.display = "none"
+      else
+        document.querySelector(".catalog__button-more").style.display = "flex"
+    }
+  }
   //==================filter-catalog============
 
   function filtersCatalog(dataList) {
