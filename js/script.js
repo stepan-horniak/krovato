@@ -255,7 +255,35 @@ function windowLoaded() {
         currentElement.classList.add("active")
       }
     }
+    //===================popap-product-main==============================
+    if (el.closest(".popap-settings-product")) {
+      const currentElement = el.closest(".popap-settings-product")
+      const elementPopap = currentElement.querySelector(".sub-menu-product")
+      const elementText = currentElement.querySelector(
+        ".popap-settings-product__text"
+      )
 
+      elementPopap.classList.toggle("active")
+      elementText.classList.toggle("active")
+    }
+    //===================popap-product-cloth==============================
+    if (el.closest(".choise-cloth-settings-product__see-more")) {
+      const element = document.querySelector(
+        ".image-choise-cloth-settings-product"
+      )
+      const elementClick = document.querySelector(
+        ".choise-cloth-settings-product__see-more"
+      )
+
+      element.classList.toggle("active")
+      elementClick.classList.toggle("active")
+      if (
+        element.classList.contains("active") &&
+        elementClick.classList.contains("active")
+      ) {
+        elementClick.textContent = "Приховати"
+      } else elementClick.textContent = "Показати всі"
+    }
     //===================hidden-body==============================
     if (
       (burgerHeader.classList.contains("active") && window.innerWidth <= 500) ||
@@ -395,6 +423,31 @@ function windowLoaded() {
         catalogFiltersContainer.append(catalogElementsFilter)
       }
     }
+    //========================product main=======================
+    const productSliderContainer = document.querySelector(".main-slider")
+    const productInfoContainer = document.querySelector(".product-info")
+    const productTopInfoContainer = document.querySelector(
+      ".top-settings-product"
+    )
+    const productSettingsContainer = document.querySelector(".settings-product")
+
+    const productFavorite = document.querySelector(
+      ".top-settings-product__add-favorites"
+    )
+
+    const productTitle = document.querySelector(".product-info__title")
+    const productInfo = document.querySelector(".info-product")
+
+    if (productSliderContainer && productInfoContainer) {
+      if (screenWidth <= 767.98) {
+        productSliderContainer.prepend(productTitle, productInfo)
+        productSettingsContainer.append(productFavorite)
+      } else {
+        productInfoContainer.prepend(productTitle, productInfo)
+        productTopInfoContainer.append(productFavorite)
+      }
+    }
+
     //===============================================
   }
   handleScreenChange()
@@ -497,13 +550,8 @@ function windowLoaded() {
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
-      // Медіа-запит для екранів до 460px
-      319.98: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
       // Медіа-запит для екранів до 768px
-      767.98: {
+      1100: {
         slidesPerView: 4,
         spaceBetween: 15,
       },
